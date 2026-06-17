@@ -130,62 +130,73 @@ export const industries = [
 export const processSteps = [
   {
     step: "01",
-    title: "Discovery",
-    description: "We dive deep into your business, target audience, and goals to understand your unique challenges.",
+    title: "Business & Marketing Audit",
+    description: "We analyze your current digital footprint, competitors, and revenue goals to identify exact growth opportunities.",
   },
   {
     step: "02",
-    title: "Strategy",
-    description: "We craft a customized digital marketing roadmap tailored to deliver the highest ROI.",
+    title: "Custom Growth Plan",
+    description: "You receive a tailored, step-by-step digital strategy designed specifically to acquire more customers in your industry.",
   },
   {
     step: "03",
-    title: "Execution",
-    description: "Our team implements the strategy, building campaigns, optimizing your site, and creating content.",
+    title: "Campaign Launch",
+    description: "We build and execute your campaigns—from high-converting landing pages to targeted ads and local SEO.",
   },
   {
     step: "04",
-    title: "Growth & Optimization",
-    description: "We continuously monitor, analyze, and refine our approach to scale your results.",
+    title: "Optimization & Scaling",
+    description: "We continuously monitor data, reduce cost-per-acquisition, and scale the campaigns that drive the most revenue.",
   },
 ];
 
 export const caseStudies = [
   {
     id: "cs-1",
-    clientIndustry: "Private Hospital",
+    clientIndustry: "Healthcare Client",
     challenge: "The hospital was heavily reliant on walk-ins and struggling to attract patients for specialized treatments.",
     solution: "We rebuilt their website for conversions and launched a targeted Google Ads campaign for high-value specialties.",
     outcome: "300% increase in patient inquiries within the first 3 months, leading to a significant boost in revenue.",
   },
   {
     id: "cs-2",
-    clientIndustry: "Real Estate Developer",
+    clientIndustry: "Real Estate Client",
     challenge: "High cost-per-lead on generic platforms and poor lead quality from existing marketing efforts.",
     solution: "Developed custom landing pages and implemented a hyper-targeted Meta Ads strategy.",
     outcome: "Reduced Cost Per Acquisition (CPA) by 45% while generating 150+ qualified leads in 30 days.",
   },
   {
     id: "cs-3",
-    clientIndustry: "Local Retail Chain",
+    clientIndustry: "Retail Client",
     challenge: "Losing market share to larger e-commerce competitors and lacking local visibility.",
     solution: "Optimized Google Business Profiles and launched a localized SEO and content strategy.",
     outcome: "Ranked #1 for core keywords locally, resulting in a 2x increase in store footfall driven by online search.",
+  },
+  {
+    id: "cs-4",
+    clientIndustry: "Education Client",
+    challenge: "Declining enrollment numbers and ineffective traditional advertising campaigns.",
+    solution: "Designed an enrollment-focused landing page funnel paired with targeted social media lead generation.",
+    outcome: "Achieved full capacity for the upcoming academic year 2 months ahead of schedule.",
   },
 ];
 
 export const founders = [
   {
     name: "Aaron",
+    fullName: "Aaron",
     role: "Founder & Lead Strategist",
     bio: "I don't believe in handing you off to a junior account manager. When you work with us, I personally oversee your strategy to ensure we are driving actual revenue, not just clicks.",
     linkedin: "",
+    photo: "", // Placeholder for real photo
   },
   {
     name: "Reethika",
+    fullName: "Reethika",
     role: "Co-Founder & Head of Growth",
     bio: "With hands-on experience scaling businesses in Tamil Nadu, I focus purely on execution. If a campaign isn't generating a positive ROI, I'll be the first to tell you and pivot.",
     linkedin: "",
+    photo: "", // Placeholder for real photo
   },
 ];
 

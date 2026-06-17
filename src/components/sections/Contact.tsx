@@ -52,6 +52,20 @@ export function Contact() {
 
             <div className="space-y-8 mb-12">
               {/* Contact information hidden until real details are provided */}
+              {process.env.NEXT_PUBLIC_WHATSAPP_NUMBER && (
+                <div className="bg-[#25D366]/10 p-6 rounded-xl border border-[#25D366]/20">
+                  <h3 className="font-semibold text-slate-900 mb-2">Prefer WhatsApp?</h3>
+                  <p className="text-sm text-slate-600 mb-4">Chat directly with a founder and get answers instantly.</p>
+                  <a 
+                    href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi Aarotech, I would like a free growth plan for my business.")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-[#25D366] text-white hover:bg-[#20bd5a]"
+                  >
+                    Chat on WhatsApp
+                  </a>
+                </div>
+              )}
             </div>
           </div>
 

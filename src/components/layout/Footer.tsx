@@ -33,6 +33,15 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
+              {process.env.NEXT_PUBLIC_BUSINESS_EMAIL && (
+                <li><a href={`mailto:${process.env.NEXT_PUBLIC_BUSINESS_EMAIL}`} className="hover:text-primary transition-colors">{process.env.NEXT_PUBLIC_BUSINESS_EMAIL}</a></li>
+              )}
+              {process.env.NEXT_PUBLIC_WHATSAPP_NUMBER && (
+                <li><a href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">WhatsApp Us</a></li>
+              )}
+              {process.env.NEXT_PUBLIC_LINKEDIN_URL && (
+                <li><a href={process.env.NEXT_PUBLIC_LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a></li>
+              )}
               <li>Tamil Nadu, India</li>
             </ul>
           </div>

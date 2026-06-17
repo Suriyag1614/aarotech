@@ -47,6 +47,14 @@ export function CaseStudies() {
             </Card>
           ))}
         </div>
+        <div className="mt-16 text-center max-w-2xl mx-auto border-t border-slate-800 pt-8">
+          <p className="text-sm text-slate-400 mb-6 italic">
+            Detailed case studies and campaign data available during consultation.
+          </p>
+          <Link href="/#contact" className="inline-flex items-center text-sm font-medium text-slate-300 hover:text-primary transition-colors border border-slate-700 hover:border-primary rounded-full px-6 py-2.5 bg-slate-800/50">
+            Request Full Case Study <ArrowRight className="ml-2 w-4 h-4" />
+          </Link>
+        </div>
       </div>
     </section>
   );

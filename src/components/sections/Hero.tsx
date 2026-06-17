@@ -20,11 +20,21 @@ export function Hero() {
         <p className="text-sm font-semibold text-primary/80 uppercase tracking-wider mb-10">
           Proudly partnering with businesses in Chennai, Coimbatore, Madurai, Trichy, & across TN.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-          <Link href="#contact" className={buttonVariants({ size: "lg", className: "h-12 px-8 text-base" })}>
-            Get My Free Growth Plan
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-8">
+          <Link href={process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ? `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi Aarotech, I would like a free growth plan for my business.")}` : "/#contact"} className={buttonVariants({ size: "lg", className: "h-12 px-8 text-base" })}>
+            Chat With a Founder
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
+        </div>
+        
+        <div className="flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-4 gap-y-2 text-sm text-muted-foreground font-medium max-w-3xl mx-auto">
+          <span>Founder-Led Agency</span>
+          <span className="hidden sm:inline opacity-50">•</span>
+          <span>Tamil Nadu Focused</span>
+          <span className="hidden sm:inline opacity-50">•</span>
+          <span>Direct Communication</span>
+          <span className="hidden sm:inline opacity-50">•</span>
+          <span>Custom Growth Strategies</span>
         </div>
 
         <div className="mt-16 pt-8 border-t w-full max-w-4xl flex flex-col items-center">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { MobileCTA } from "@/components/layout/MobileCTA";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -38,6 +39,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col pb-20 sm:pb-0">
         {children}
+        <WhatsAppButton />
         <MobileCTA />
       </body>
     </html>
