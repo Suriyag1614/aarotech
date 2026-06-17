@@ -1,6 +1,8 @@
 import { testimonials } from "@/data/content";
 
 export function Testimonials() {
+  if (testimonials.length === 0) return null;
+
   return (
     <section className="py-24 bg-white border-y">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +19,7 @@ export function Testimonials() {
                   </svg>
                 ))}
               </div>
-              <p className="text-slate-700 italic text-lg leading-relaxed mb-8">"{testimonial.quote}"</p>
+              <p className="text-slate-700 italic text-lg leading-relaxed mb-8">&quot;{testimonial.quote}&quot;</p>
               <div>
                 <p className="font-bold text-slate-900">{testimonial.author}</p>
                 <p className="text-sm text-slate-500">{testimonial.role}</p>

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Mail, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -33,7 +33,7 @@ export function Contact() {
       } else {
         alert("Oops! There was a problem submitting your form.");
       }
-    } catch (error) {
+    } catch {
       alert("Oops! There was a problem submitting your form.");
     } finally {
       setIsSubmitting(false);
@@ -47,42 +47,11 @@ export function Contact() {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Ready to Grow?</h2>
             <p className="text-lg text-muted-foreground mb-10">
-              Whether you need a free growth plan, a custom strategy, or just want to bounce some ideas around—let's talk.
+              Whether you need a free growth plan, a custom strategy, or just want to bounce some ideas around&mdash;let&apos;s talk.
             </p>
 
             <div className="space-y-8 mb-12">
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0 mr-4">
-                  <MessageCircle className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">Chat with Founder</h4>
-                  <p className="text-muted-foreground text-sm mb-2">Fastest way to reach us</p>
-                  <a href="https://wa.me/919385643066" className="text-primary font-medium hover:underline">+91 98765 43210</a>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0 mr-4">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">Email Us</h4>
-                  <p className="text-muted-foreground text-sm mb-2">For detailed inquiries</p>
-                  <a href="mailto:hello@aarotech.example.com" className="text-primary font-medium hover:underline">hello@aarotech.example.com</a>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0 mr-4">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">Call Us</h4>
-                  <p className="text-muted-foreground text-sm mb-2">Mon-Fri from 9am to 6pm</p>
-                  <a href="tel:+919876543210" className="text-primary font-medium hover:underline">+91 98765 43210</a>
-                </div>
-              </div>
+              {/* Contact information hidden until real details are provided */}
             </div>
           </div>
 
@@ -115,8 +84,13 @@ export function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number</Label>
-                    <Input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required className="bg-white" />
+                    <Label htmlFor="email">Email Address</Label>
+                    <Input id="email" name="email" type="email" placeholder="you@company.com" required className="bg-white" />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Phone Number (Optional)</Label>
+                    <Input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" className="bg-white" />
                   </div>
 
                   <div className="space-y-2">

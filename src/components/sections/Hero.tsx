@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Button, buttonVariants } from "@/components/ui/button";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
@@ -24,10 +24,6 @@ export function Hero() {
           <Link href="#contact" className={buttonVariants({ size: "lg", className: "h-12 px-8 text-base" })}>
             Get My Free Growth Plan
             <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-          <Link href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline", size: "lg", className: "h-12 px-8 text-base" })}>
-            <MessageCircle className="mr-2 h-4 w-4" />
-            Chat with Founder
           </Link>
         </div>
 

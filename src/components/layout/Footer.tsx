@@ -16,25 +16,23 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="#services" className="hover:text-primary">Website Development</Link></li>
-              <li><Link href="#services" className="hover:text-primary">SEO</Link></li>
-              <li><Link href="#services" className="hover:text-primary">Google & Meta Ads</Link></li>
-              <li><Link href="#services" className="hover:text-primary">Branding</Link></li>
+              <li><Link href="/#services" className="hover:text-primary">Website Development</Link></li>
+              <li><Link href="/#services" className="hover:text-primary">SEO</Link></li>
+              <li><Link href="/#services" className="hover:text-primary">Google & Meta Ads</Link></li>
+              <li><Link href="/#services" className="hover:text-primary">Branding</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="#work" className="hover:text-primary">Case Studies</Link></li>
-              <li><Link href="#about" className="hover:text-primary">About Us</Link></li>
-              <li><Link href="#contact" className="hover:text-primary">Contact</Link></li>
+              <li><Link href="/#work" className="hover:text-primary">Case Studies</Link></li>
+              <li><Link href="/#about" className="hover:text-primary">About Us</Link></li>
+              <li><Link href="/#contact" className="hover:text-primary">Contact</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>hello@aarotech.example.com</li>
-              <li>+91 98765 43210</li>
               <li>Tamil Nadu, India</li>
             </ul>
           </div>
@@ -42,8 +40,8 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} Aarotech Digital Marketing. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link href="#" className="hover:text-primary">Privacy Policy</Link>
-            <Link href="#" className="hover:text-primary">Terms of Service</Link>
+            <Link href="/privacy-policy" className="hover:text-primary">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-primary">Terms of Service</Link>
           </div>
         </div>
       </div>

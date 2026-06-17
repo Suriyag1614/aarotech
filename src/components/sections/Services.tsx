@@ -26,7 +26,7 @@ export function Services() {
                 <CardDescription className="text-base text-muted-foreground mb-6">
                   {service.description}
                 </CardDescription>
-                <Link href="#contact" className="inline-flex items-center text-sm font-medium text-primary group-hover:underline">
+                <Link href={`/services/${service.id}`} className="inline-flex items-center text-sm font-medium text-primary group-hover:underline">
                   Learn more <ArrowRight className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </CardContent>

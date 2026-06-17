@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 
 export function Header() {
   return (
@@ -11,13 +11,13 @@ export function Header() {
           </Link>
         </div>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          <Link href="#services" className="transition-colors hover:text-primary text-muted-foreground">Services</Link>
-          <Link href="#work" className="transition-colors hover:text-primary text-muted-foreground">Case Studies</Link>
-          <Link href="#about" className="transition-colors hover:text-primary text-muted-foreground">About</Link>
-          <Link href="#faq" className="transition-colors hover:text-primary text-muted-foreground">FAQ</Link>
+          <Link href="/#services" className="transition-colors hover:text-primary text-muted-foreground">Services</Link>
+          <Link href="/#work" className="transition-colors hover:text-primary text-muted-foreground">Case Studies</Link>
+          <Link href="/#about" className="transition-colors hover:text-primary text-muted-foreground">About</Link>
+          <Link href="/#faq" className="transition-colors hover:text-primary text-muted-foreground">FAQ</Link>
         </nav>
         <div className="flex items-center gap-4">
-          <Link href="#contact" className={buttonVariants({ className: "hidden sm:inline-flex" })}>Get My Free Growth Plan</Link>
+          <Link href="/#contact" className={buttonVariants({ className: "hidden sm:inline-flex" })}>Get My Free Growth Plan</Link>
         </div>
       </div>
     </header>
