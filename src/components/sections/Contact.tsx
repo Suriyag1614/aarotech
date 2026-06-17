@@ -110,15 +110,15 @@ export function Contact() {
                   <div className="space-y-2">
                     <Label htmlFor="challenge">What is your biggest challenge right now?</Label>
                     <Select name="challenge" required>
-                      <SelectTrigger className="bg-white">
+                      <SelectTrigger className="w-full bg-white">
                         <SelectValue placeholder="Select your biggest challenge..." />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="need_leads">We need more qualified leads</SelectItem>
-                        <SelectItem value="wasting_ad_spend">We are wasting money on ads</SelectItem>
-                        <SelectItem value="outdated_website">Our website is outdated</SelectItem>
-                        <SelectItem value="low_traffic">We have low website traffic (SEO)</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
+                        <SelectItem value="We need more qualified leads">We need more qualified leads</SelectItem>
+                        <SelectItem value="We are wasting money on ads">We are wasting money on ads</SelectItem>
+                        <SelectItem value="Our website is outdated">Our website is outdated</SelectItem>
+                        <SelectItem value="We have low website traffic (SEO)">We have low website traffic (SEO)</SelectItem>
+                        <SelectItem value="Other">Other</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
