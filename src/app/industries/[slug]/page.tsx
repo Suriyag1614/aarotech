@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!industry) return {};
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://aarotech.in";
-  const title = industry.h1 ? industry.h1.replace("[Draft] ", "") + " | Aarotech" : `Digital Marketing for ${industry.title} | Aarotech`;
-  const description = industry.intro ? industry.intro.replace("[Draft] ", "") : `Custom digital marketing growth plans for ${industry.title} businesses.`;
+  const title = industry.h1 ? industry.h1 + " | Aarotech" : `Digital Marketing for ${industry.title} | Aarotech`;
+  const description = industry.intro ? industry.intro : `Custom digital marketing growth plans for ${industry.title} businesses.`;
 
   return {
     title,
