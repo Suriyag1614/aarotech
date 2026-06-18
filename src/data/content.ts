@@ -188,7 +188,7 @@ export const founders = [
     role: "Founder & Lead Strategist",
     bio: "I don't believe in handing you off to a junior account manager. When you work with us, I personally oversee your strategy to ensure we are driving actual revenue, not just clicks.",
     linkedin: "",
-    photo: "", // Placeholder for real photo
+    photo: "public/images/aaron.jpeg", // Placeholder for real photo
   },
   {
     name: "Reethika",
@@ -196,11 +196,11 @@ export const founders = [
     role: "Co-Founder & Head of Growth",
     bio: "With hands-on experience scaling businesses in Tamil Nadu, I focus purely on execution. If a campaign isn't generating a positive ROI, I'll be the first to tell you and pivot.",
     linkedin: "",
-    photo: "", // Placeholder for real photo
+    photo: "public/images/reethika.jpeg", // Placeholder for real photo
   },
 ];
 
-export const testimonials: Array<{id: string, quote: string, author: string, role: string}> = [];
+export const testimonials: Array<{ id: string, quote: string, author: string, role: string }> = [];
 
 export const faqs = [
   {
