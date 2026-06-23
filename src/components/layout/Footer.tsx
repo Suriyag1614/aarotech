@@ -8,18 +8,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
-              <Image 
-                src="/images/header-logo-light.png" 
-                alt="Aarotech" 
-                width={240} 
-                height={70} 
+              <Image
+                src="/images/header-logo-light.png"
+                alt="Aarotech"
+                width={240}
+                height={70}
                 className="h-14 md:h-20 w-auto object-contain block dark:hidden"
               />
-              <Image 
-                src="/images/header-logo-dark.png" 
-                alt="Aarotech" 
-                width={240} 
-                height={70} 
+              <Image
+                src="/images/header-logo-dark.png"
+                alt="Aarotech"
+                width={240}
+                height={70}
                 className="h-14 md:h-20 w-auto object-contain hidden dark:block"
               />
             </Link>
@@ -61,7 +61,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Aarotech Digital Marketing. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Aarotech. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link href="/privacy-policy" className="hover:text-primary">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-primary">Terms of Service</Link>

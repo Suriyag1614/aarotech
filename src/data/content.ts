@@ -161,19 +161,19 @@ export const caseStudies = [
   },
   {
     id: "cs-2",
-    clientIndustry: "Healthcare Client (Skin & Haircare)",
-    challenge: "Struggling to attract new daily patients and competing against long-established clinics in their immediate vicinity.",
-    solution: "Executed highly targeted performance marketing campaigns and optimized their local search presence to immediately gain patient trust.",
-    outcome: "Generated a consistent flow of 70+ new patient consultations per week, effectively doubling their monthly revenue.",
-    image: "/images/skincare.jpeg",
-  },
-  {
-    id: "cs-3",
     clientIndustry: "Local Service Client",
     challenge: "Started with extremely low initial footfalls and had weak local visibility for their primary services.",
     solution: "Launched hyper-targeted Meta Ads, fully optimized their Google My Business (GMB) profile, and set up direct lead generation campaigns.",
     outcome: "Achieved a 300% increase in local foot traffic and generated 200+ highly qualified service leads within the first 60 days.",
     image: "/images/services.jpeg",
+  },
+  {
+    id: "cs-3",
+    clientIndustry: "Healthcare Client (Skin & Haircare)",
+    challenge: "Struggling to attract new daily patients and competing against long-established clinics in their immediate vicinity.",
+    solution: "Executed highly targeted performance marketing campaigns and optimized their local search presence to immediately gain patient trust.",
+    outcome: "Generated a consistent flow of 70+ new patient consultations per week, effectively doubling their monthly revenue.",
+    image: "/images/skincare.jpeg",
   },
 ];
 
