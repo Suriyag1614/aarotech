@@ -24,13 +24,14 @@ export function WhyWorkWithUs() {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">Why Choose Aarotech?</h2>
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            We built this agency because we saw too many businesses getting burned by overpromising and underdelivering. We do things differently.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-8">Why Choose Aarotech?</h2>
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed">
-              We built this agency because we saw too many businesses getting burned by overpromising and underdelivering. We do things differently.
-            </p>
-            
             <div className="space-y-6">
               {comparisons.map((item, index) => (
                 <div key={index} className="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
@@ -59,18 +60,18 @@ export function WhyWorkWithUs() {
           </div>
 
           <div className="relative">
-            <div className="aspect-square bg-slate-100 rounded-3xl overflow-hidden relative border-8 border-white shadow-xl">
-              <Image 
-                src="/images/office.jpeg" 
-                alt="Aarotech office and team working" 
-                fill 
+            <div className="aspect-[4/2.8] bg-slate-100 rounded-3xl overflow-hidden relative border-8 border-white shadow-xl">
+              <Image
+                src="/images/office.jpeg"
+                alt="Aarotech office and team working"
+                fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover" 
+                className="object-cover"
+                unoptimized={true}
               />
             </div>
             {/* Decorative elements */}
-            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
-            <div className="absolute -top-6 -right-6 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
           </div>
         </div>
       </div>

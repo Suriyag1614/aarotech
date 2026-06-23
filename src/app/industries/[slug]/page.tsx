@@ -59,7 +59,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
               {industry.h1 || `Digital Marketing for ${industry.title}`}
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              {industry.intro || `We understand the unique challenges of the ${industry.title.toLowerCase()} sector in Tamil Nadu and build tailored strategies to drive qualified leads and actual revenue.`}
+              {industry.intro || `We understand the unique challenges of the ${industry.title.toLowerCase()} sector and build tailored strategies to drive qualified leads and actual revenue.`}
             </p>
           </div>
 

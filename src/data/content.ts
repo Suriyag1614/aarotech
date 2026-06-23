@@ -1,9 +1,53 @@
-import { Code, Search, Megaphone, Share2, PenTool, LayoutTemplate } from "lucide-react";
+import { Code, Search, Megaphone, Share2, PenTool, LayoutTemplate, Video } from "lucide-react";
 
 export const services = [
   {
+    id: "content-creation",
+    title: "Content Creation",
+    description: "High-quality, engaging content designed to capture attention and tell your brand's unique story.",
+    icon: Video,
+    h1: "High-Quality Content Creation Services",
+    intro: "We produce engaging video, image, and text content that stops the scroll and drives meaningful interaction.",
+    benefits: ["Benefit 1: High-retention video editing", "Benefit 2: Engaging copywriting", "Benefit 3: Professional visual design"],
+    faqs: [{ question: "Do you shoot videos?", answer: "We focus on post-production and editing high-quality supplied footage." }],
+    cta: "Start Creating Content"
+  },
+  {
+    id: "social-media",
+    title: "Social Media Marketing",
+    description: "Engaging content and community management to build trust and loyalty.",
+    icon: Code,
+    h1: "Organic Social Media Management",
+    intro: "Grow an engaged following and build trust through consistent, high-quality organic social media content.",
+    benefits: ["Benefit 1: Consistent posting schedule", "Benefit 2: Community engagement", "Benefit 3: Brand voice development"],
+    faqs: [{ question: "Which platforms do you handle?", answer: "We specialize in Instagram, Facebook, LinkedIn, and Twitter." }],
+    cta: "Elevate Your Social Presence"
+  },
+  {
+    id: "digital-advertising",
+    title: "Meta & Google Ads",
+    description: "Data-driven advertising campaigns across Search, Facebook, and Instagram to generate qualified leads.",
+    icon: Megaphone,
+    h1: "High-ROI Digital Advertising Campaigns",
+    intro: "Capture high-intent searchers on Google and build massive brand awareness on Meta to generate qualified leads.",
+    benefits: ["Benefit 1: Advanced keyword and audience targeting", "Benefit 2: Conversion rate optimization", "Benefit 3: Transparent ROI reporting"],
+    faqs: [{ question: "Do you handle both Meta and Google?", answer: "Yes, we create omni-channel strategies using both platforms to maximize your return on ad spend." }],
+    cta: "Get a Free Ads Audit"
+  },
+  {
+    id: "branding",
+    title: "Branding & Creative Design",
+    description: "Professional logos, brand identity, and visual assets that make your business stand out.",
+    icon: PenTool,
+    h1: "Premium Brand Identity Design",
+    intro: "Look like an industry leader with a cohesive, professional brand identity that builds immediate trust.",
+    benefits: ["Benefit 1: Logo and visual identity", "Benefit 2: Brand guidelines creation", "Benefit 3: Marketing collateral design"],
+    faqs: [{ question: "Do you do rebranding?", answer: "Yes, we help established businesses refresh their look for the modern digital era." }],
+    cta: "Transform Your Brand"
+  },
+  {
     id: "website-development",
-    title: "Website Development",
+    title: "Web Development",
     description: "Fast, conversion-optimized websites built to turn your visitors into paying customers.",
     icon: LayoutTemplate,
     h1: "High-Converting Website Development",
@@ -22,50 +66,6 @@ export const services = [
     benefits: ["Benefit 1: Technical SEO audits", "Benefit 2: High-quality link building", "Benefit 3: Local Google Business Profile optimization"],
     faqs: [{ question: "When will I see results?", answer: "SEO is a long-term strategy, typically showing significant movement in 3-6 months." }],
     cta: "Start Your SEO Campaign"
-  },
-  {
-    id: "google-ads",
-    title: "Google Ads",
-    description: "Data-driven search campaigns that place your business right where your customers are looking.",
-    icon: Megaphone,
-    h1: "High-ROI Google Ads Management",
-    intro: "Capture high-intent searches the exact moment potential customers are looking for your services.",
-    benefits: ["Benefit 1: Advanced keyword targeting", "Benefit 2: Conversion rate optimization", "Benefit 3: Transparent ROI reporting"],
-    faqs: [{ question: "What is a good budget?", answer: "It depends on your industry, but we recommend starting with at least ₹30,000/month." }],
-    cta: "Get a Free Ads Audit"
-  },
-  {
-    id: "meta-ads",
-    title: "Meta Ads (Facebook & Instagram)",
-    description: "Targeted social advertising to build brand awareness and generate qualified leads.",
-    icon: Share2,
-    h1: "Scalable Meta Ads Strategies",
-    intro: "Build massive brand awareness and generate cheap, qualified leads using Facebook and Instagram targeting.",
-    benefits: ["Benefit 1: Custom audience building", "Benefit 2: Engaging creative design", "Benefit 3: Retargeting campaigns"],
-    faqs: [{ question: "Do Meta Ads work for B2B?", answer: "Yes, with the right offer and lookalike audiences, B2B campaigns can be highly successful." }],
-    cta: "Scale with Meta Ads"
-  },
-  {
-    id: "social-media",
-    title: "Social Media Marketing",
-    description: "Engaging content and community management to build trust and loyalty.",
-    icon: Code,
-    h1: "Organic Social Media Management",
-    intro: "Grow an engaged following and build trust through consistent, high-quality organic social media content.",
-    benefits: ["Benefit 1: Consistent posting schedule", "Benefit 2: Community engagement", "Benefit 3: Brand voice development"],
-    faqs: [{ question: "Which platforms do you handle?", answer: "We specialize in Instagram, Facebook, LinkedIn, and Twitter." }],
-    cta: "Elevate Your Social Presence"
-  },
-  {
-    id: "branding",
-    title: "Branding & Creative Design",
-    description: "Professional logos, brand identity, and visual assets that make your business stand out.",
-    icon: PenTool,
-    h1: "Premium Brand Identity Design",
-    intro: "Look like an industry leader with a cohesive, professional brand identity that builds immediate trust.",
-    benefits: ["Benefit 1: Logo and visual identity", "Benefit 2: Brand guidelines creation", "Benefit 3: Marketing collateral design"],
-    faqs: [{ question: "Do you do rebranding?", answer: "Yes, we help established businesses refresh their look for the modern digital era." }],
-    cta: "Transform Your Brand"
   },
 ];
 
@@ -153,35 +153,39 @@ export const processSteps = [
 export const caseStudies = [
   {
     id: "cs-1",
-    clientIndustry: "Healthcare Client",
-    challenge: "The hospital was heavily reliant on walk-ins and struggling to attract patients for specialized treatments.",
-    solution: "We rebuilt their website for conversions and launched a targeted Google Ads campaign for high-value specialties.",
-    outcome: "300% increase in patient inquiries within the first 3 months, leading to a significant boost in revenue.",
+    clientIndustry: "Healthcare Client (Orthopedic)",
+    challenge: "The hospital faced very low physical walk-ins and was losing patients to heavy local competition.",
+    solution: "We deployed a comprehensive trust-building content strategy to establish medical authority, paired with an aggressive local visibility campaign to drive high footfalls.",
+    outcome: "Increased physical walk-ins by 210% and established a dominant local search presence, drastically reducing reliance on traditional marketing.",
+    image: "/images/orthopedic.jpeg",
   },
   {
     id: "cs-2",
-    clientIndustry: "Real Estate Client",
-    challenge: "High cost-per-lead on generic platforms and poor lead quality from existing marketing efforts.",
-    solution: "Developed custom landing pages and implemented a hyper-targeted Meta Ads strategy.",
-    outcome: "Reduced Cost Per Acquisition (CPA) by 45% while generating 150+ qualified leads in 30 days.",
+    clientIndustry: "Healthcare Client (Skin & Haircare)",
+    challenge: "Struggling to attract new daily patients and competing against long-established clinics in their immediate vicinity.",
+    solution: "Executed highly targeted performance marketing campaigns and optimized their local search presence to immediately gain patient trust.",
+    outcome: "Generated a consistent flow of 70+ new patient consultations per week, effectively doubling their monthly revenue.",
+    image: "/images/skincare.jpeg",
   },
   {
     id: "cs-3",
-    clientIndustry: "Retail Client",
-    challenge: "Losing market share to larger e-commerce competitors and lacking local visibility.",
-    solution: "Optimized Google Business Profiles and launched a localized SEO and content strategy.",
-    outcome: "Ranked #1 for core keywords locally, resulting in a 2x increase in store footfall driven by online search.",
-  },
-  {
-    id: "cs-4",
-    clientIndustry: "Education Client",
-    challenge: "Declining enrollment numbers and ineffective traditional advertising campaigns.",
-    solution: "Designed an enrollment-focused landing page funnel paired with targeted social media lead generation.",
-    outcome: "Achieved full capacity for the upcoming academic year 2 months ahead of schedule.",
+    clientIndustry: "Local Service Client",
+    challenge: "Started with extremely low initial footfalls and had weak local visibility for their primary services.",
+    solution: "Launched hyper-targeted Meta Ads, fully optimized their Google My Business (GMB) profile, and set up direct lead generation campaigns.",
+    outcome: "Achieved a 300% increase in local foot traffic and generated 200+ highly qualified service leads within the first 60 days.",
+    image: "/images/services.jpeg",
   },
 ];
 
 export const founders = [
+  {
+    name: "Suriyanarayanan",
+    fullName: "Suriyanarayanan",
+    role: "Development & UX",
+    bio: "Building lightning-fast, scalable, and beautifully designed websites focused entirely on user experience and lead generation.",
+    linkedin: "",
+    photo: "/images/suriyanarayanan.jpeg",
+  },
   {
     name: "Aaron",
     fullName: "Aaron",
@@ -191,12 +195,12 @@ export const founders = [
     photo: "/images/aaron.jpeg",
   },
   {
-    name: "Reethika",
-    fullName: "Reethika",
-    role: "Co-Founder & Head of Growth",
-    bio: "With hands-on experience scaling businesses in Tamil Nadu, I focus purely on execution. If a campaign isn't generating a positive ROI, I'll be the first to tell you and pivot.",
+    name: "Susinthiran",
+    fullName: "Susinthiran",
+    role: "Video Editor & Creative",
+    bio: "Crafting engaging, high-retention video content that captures attention, stops the scroll, and builds brand awareness.",
     linkedin: "",
-    photo: "/images/reethika.jpeg",
+    photo: "/images/susinthiran.jpeg",
   },
 ];
 

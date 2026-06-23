@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -7,10 +8,23 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
-              <span className="text-xl font-bold text-primary tracking-tight">Aarotech.</span>
+              <Image 
+                src="/images/header-logo-light.png" 
+                alt="Aarotech" 
+                width={240} 
+                height={70} 
+                className="h-14 md:h-20 w-auto object-contain block dark:hidden"
+              />
+              <Image 
+                src="/images/header-logo-dark.png" 
+                alt="Aarotech" 
+                width={240} 
+                height={70} 
+                className="h-14 md:h-20 w-auto object-contain hidden dark:block"
+              />
             </Link>
             <p className="text-sm text-muted-foreground">
-              Helping Tamil Nadu businesses grow through data-driven digital marketing, SEO, and targeted advertising.
+              Helping businesses grow through data-driven digital marketing, SEO, and targeted advertising.
             </p>
           </div>
           <div>

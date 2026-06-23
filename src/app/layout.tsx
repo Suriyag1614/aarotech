@@ -14,10 +14,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  title: "Aarotech | Digital Marketing Agency in Tamil Nadu",
+  title: "Aarotech | Premium Digital Marketing Agency",
   description: "We help businesses generate more leads, improve online visibility, and grow revenue through websites, SEO, advertising, and social media.",
   openGraph: {
-    title: "Aarotech | Digital Marketing Agency in Tamil Nadu",
+    title: "Aarotech | Premium Digital Marketing Agency",
     description: "We help businesses generate more leads, improve online visibility, and grow revenue through websites, SEO, advertising, and social media.",
     siteName: "Aarotech",
     locale: "en_IN",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aarotech | Digital Marketing Agency in Tamil Nadu",
+    title: "Aarotech | Premium Digital Marketing Agency",
     description: "We help businesses generate more leads, improve online visibility, and grow revenue through websites, SEO, advertising, and social media.",
   },
 };
@@ -37,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col pb-20 sm:pb-0">
+      <body className="min-h-full flex flex-col pb-20 sm:pb-0 overflow-x-hidden">
         {children}
         <WhatsAppButton />
         <MobileCTA />

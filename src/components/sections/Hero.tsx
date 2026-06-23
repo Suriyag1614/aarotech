@@ -9,10 +9,10 @@ export function Hero() {
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
         <div className="inline-flex items-center rounded-full border px-3 py-1 text-sm text-muted-foreground mb-8 bg-background/50 backdrop-blur-sm">
           <span className="flex h-2 w-2 rounded-full bg-green-500 mr-2"></span>
-          Accepting new clients in Tamil Nadu
+          Accepting new clients
         </div>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground max-w-4xl mb-6">
-          Get More Leads, Customers, and Revenue for Your Tamil Nadu Business
+          Get More Leads, Customers, and Revenue for Your Business
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-4 leading-relaxed mx-auto">
           We help businesses generate more leads, improve online visibility, and grow revenue through high-converting websites, SEO, advertising, and social media.
@@ -30,7 +30,7 @@ export function Hero() {
         <div className="flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-4 gap-y-2 text-sm text-muted-foreground font-medium max-w-3xl mx-auto">
           <span>Founder-Led Agency</span>
           <span className="hidden sm:inline opacity-50">•</span>
-          <span>Tamil Nadu Focused</span>
+          <span>Results Driven</span>
           <span className="hidden sm:inline opacity-50">•</span>
           <span>Direct Communication</span>
           <span className="hidden sm:inline opacity-50">•</span>

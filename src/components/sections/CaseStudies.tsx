@@ -2,6 +2,7 @@ import { caseStudies } from "@/data/content";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, LayoutTemplate } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function CaseStudies() {
   return (
@@ -11,7 +12,7 @@ export function CaseStudies() {
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">Results We&apos;ve Helped Create</h2>
             <p className="text-lg md:text-xl text-slate-400 leading-relaxed">
-              We do not just talk about growth; we deliver it. Here is how we have helped businesses across Tamil Nadu achieve their goals.
+              We do not just talk about growth; we deliver it. Here is how we have helped businesses achieve their goals.
             </p>
           </div>
           <Link href="#contact" className="inline-flex items-center font-medium text-primary hover:text-primary/80 transition-colors">
@@ -21,9 +22,22 @@ export function CaseStudies() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {caseStudies.map((study) => (
             <Card key={study.id} className="bg-slate-800 border-slate-700 text-slate-50 flex flex-col overflow-hidden hover:border-slate-500 transition-colors duration-300">
-              <div className="w-full h-48 bg-slate-800 border-b border-slate-700 relative flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_0%,transparent_100%)]"></div>
-                <LayoutTemplate className="w-16 h-16 text-slate-600/50" strokeWidth={1} />
+              <div className="w-full h-56 md:h-64 bg-slate-800 border-b border-slate-700 relative overflow-hidden group">
+                {study.image ? (
+                  <Image 
+                    src={study.image} 
+                    alt={`${study.clientIndustry} case study`} 
+                    fill 
+                    className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_0%,transparent_100%)]"></div>
+                    <div className="flex items-center justify-center h-full">
+                      <LayoutTemplate className="w-16 h-16 text-slate-600/50" strokeWidth={1} />
+                    </div>
+                  </>
+                )}
               </div>
               <CardContent className="p-6 md:p-8 flex-1 flex flex-col">
                 <div className="inline-flex items-center rounded-full bg-slate-900/50 border border-slate-700 px-3 py-1 text-xs font-bold text-slate-300 mb-6 w-fit">

@@ -10,6 +10,7 @@ import { CheckCircle2 } from "lucide-react";
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [selectedChallenge, setSelectedChallenge] = useState<string>("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -56,7 +57,7 @@ export function Contact() {
                 <div className="bg-[#25D366]/10 p-6 rounded-xl border border-[#25D366]/20">
                   <h3 className="font-semibold text-slate-900 mb-2">Prefer WhatsApp?</h3>
                   <p className="text-sm text-slate-600 mb-4">Chat directly with a founder and get answers instantly.</p>
-                  <a 
+                  <a
                     href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi Aarotech, I would like a free growth plan for my business.")}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -99,17 +100,17 @@ export function Contact() {
 
                   <div className="space-y-2">
                     <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" name="email" type="email" placeholder="you@company.com" required className="bg-white" />
+                    <Input id="email" name="email" type="email" placeholder="you@company.com" className="bg-white" />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number (Optional)</Label>
-                    <Input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" className="bg-white" />
+                    <Label htmlFor="phone">Phone Number</Label>
+                    <Input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required className="bg-white" />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="challenge">What is your biggest challenge right now?</Label>
-                    <Select name="challenge" required>
+                    <Select name="challenge" required onValueChange={(val) => setSelectedChallenge(val ? String(val) : "")}>
                       <SelectTrigger className="w-full bg-white">
                         <SelectValue placeholder="Select your biggest challenge..." />
                       </SelectTrigger>
@@ -122,6 +123,13 @@ export function Contact() {
                       </SelectContent>
                     </Select>
                   </div>
+
+                  {selectedChallenge === "Other" && (
+                    <div className="space-y-2 animate-in fade-in slide-in-from-top-2 duration-300">
+                      <Label htmlFor="otherChallenge">Please specify your challenge</Label>
+                      <Input id="otherChallenge" name="otherChallenge" placeholder="Tell us more about your challenge..." required className="bg-white" />
+                    </div>
+                  )}
 
                   <Button type="submit" size="lg" className="w-full text-base" disabled={isSubmitting}>
                     {isSubmitting ? "Sending..." : "Get My Free Growth Plan"}
