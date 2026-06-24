@@ -10,9 +10,9 @@ const clients = [
 
 export function ClientLogos() {
   return (
-    <section className="py-12 border-b bg-slate-50/50">
+    <section className="py-12 border-b bg-white border-slate-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <p className="text-center text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-8">
+        <p className="text-center text-sm font-bold text-slate-500 uppercase tracking-wider mb-8">
           Trusted by ambitious brands
         </p>
         <div className="relative flex overflow-hidden group">

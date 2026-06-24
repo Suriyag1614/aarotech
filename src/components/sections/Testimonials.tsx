@@ -6,20 +6,20 @@ export function Testimonials() {
   if (testimonials.length === 0) return null;
 
   return (
-    <section id="testimonials" className="py-24 bg-slate-50 border-y">
+    <section id="testimonials" className="py-24 bg-slate-950 text-white border-y border-white/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">What Our Partners Say</h2>
-          <p className="text-lg text-muted-foreground">Real results from real businesses we've partnered with.</p>
+          <p className="text-lg text-slate-300">Real results from real businesses we've partnered with.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="bg-white flex flex-col rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div key={testimonial.id} className="bg-white/5 flex flex-col rounded-2xl border border-white/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 backdrop-blur-md hover:bg-white/10 hover:-translate-y-1">
               
               {/* Video Section (if present) */}
               {testimonial.videoUrl ? (
-                <div className="w-full aspect-video bg-slate-900 relative">
+                <div className="w-full aspect-video bg-black relative">
                   <video 
                     src={testimonial.videoUrl} 
                     controls 
@@ -32,7 +32,7 @@ export function Testimonials() {
               <div className="p-8 flex flex-col flex-grow">
                 {/* Result Highlight */}
                 {testimonial.resultAchieved && (
-                  <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1.5 rounded-full text-sm font-semibold w-fit mb-6">
+                  <div className="inline-flex items-center gap-2 bg-green-500/10 text-green-400 px-3 py-1.5 rounded-full text-sm font-semibold w-fit mb-6 border border-green-500/20">
                     <TrendingUp className="w-4 h-4" />
                     {testimonial.resultAchieved}
                   </div>
@@ -48,15 +48,15 @@ export function Testimonials() {
                 </div>
 
                 {/* Quote */}
-                <p className="text-slate-700 italic leading-relaxed mb-8 flex-grow">
+                <p className="text-slate-300 italic leading-relaxed mb-8 flex-grow">
                   &quot;{testimonial.quote}&quot;
                 </p>
 
                 {/* Author Info */}
-                <div className="flex items-center gap-4 mt-auto pt-6 border-t border-slate-100">
+                <div className="flex items-center gap-4 mt-auto pt-6 border-t border-white/10">
                   {/* Photo fallback if no video is used, or always show photo avatar */}
                   {testimonial.photo && !testimonial.videoUrl && (
-                    <div className="relative w-12 h-12 rounded-full overflow-hidden border border-slate-200 shrink-0 bg-slate-50">
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 shrink-0 bg-white/10">
                       <Image 
                         src={testimonial.photo} 
                         alt={testimonial.author} 
@@ -68,7 +68,7 @@ export function Testimonials() {
                   )}
                   {/* Even if video exists, we can still show avatar, but let's show it anyway if photo exists */}
                   {testimonial.photo && testimonial.videoUrl && (
-                    <div className="relative w-12 h-12 rounded-full overflow-hidden border border-slate-200 shrink-0 bg-slate-50 p-1">
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 shrink-0 bg-white/10 p-1">
                       <Image 
                         src={testimonial.photo} 
                         alt={testimonial.company || testimonial.author} 
@@ -80,8 +80,8 @@ export function Testimonials() {
                   )}
 
                   <div>
-                    <p className="font-bold text-slate-900 text-sm">{testimonial.author}</p>
-                    <p className="text-xs text-slate-500">
+                    <p className="font-bold text-white text-sm">{testimonial.author}</p>
+                    <p className="text-xs text-slate-400">
                       {testimonial.role}{testimonial.company ? ` at ${testimonial.company}` : ''}
                     </p>
                   </div>

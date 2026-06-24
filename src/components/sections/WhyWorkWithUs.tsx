@@ -26,7 +26,7 @@ export function WhyWorkWithUs() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">Why Choose Aarotech?</h2>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-500 leading-relaxed">
             We built this agency because we saw too many businesses getting burned by overpromising and underdelivering. We do things differently.
           </p>
         </div>
@@ -34,7 +34,7 @@ export function WhyWorkWithUs() {
           <div>
             <div className="space-y-6">
               {comparisons.map((item, index) => (
-                <div key={index} className="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                <div key={index} className="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex-1 opacity-60">
                     <div className="flex items-start">
                       <XCircle className="w-5 h-5 text-destructive shrink-0 mr-3 mt-0.5" />
@@ -50,7 +50,7 @@ export function WhyWorkWithUs() {
                       <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mr-3 mt-0.5" />
                       <div>
                         <span className="block text-xs font-bold uppercase tracking-wider mb-1 text-primary">Aarotech</span>
-                        <p className="text-sm font-medium text-slate-900">{item.aarotech}</p>
+                        <p className="text-sm font-bold text-slate-900">{item.aarotech}</p>
                       </div>
                     </div>
                   </div>

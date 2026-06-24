@@ -8,10 +8,10 @@ export function MeetFounders() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">The People Behind the Campaigns</h2>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
+          <p className="text-lg md:text-xl text-slate-500 leading-relaxed mb-6">
             We started Aarotech after watching local businesses waste lakhs on vanity metrics with traditional agencies. We wanted to build an agency that actually cares about your pipeline and revenue.
           </p>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-500 leading-relaxed">
             No juniors. No fluff. Just experts dedicated to helping businesses thrive online.
           </p>
         </div>
@@ -32,19 +32,19 @@ export function MeetFounders() {
                 <div className="flex items-center gap-2 mb-2">
                   <h3 className={`${isFounder ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'} font-bold`}>{founder.fullName || founder.name}</h3>
                   {founder.linkedin && (
-                    <a href={founder.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-[#0A66C2] transition-colors">
+                    <a href={founder.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-[#0A66C2] transition-colors">
                       <LinkIcon className="w-5 h-5" />
                       <span className="sr-only">LinkedIn Profile</span>
                     </a>
                   )}
                 </div>
-                <p className={`text-primary font-medium ${isFounder ? 'mb-3 text-lg' : 'mb-2 text-base'}`}>{founder.role}</p>
-                {isFounder && (
-                  <p className="text-sm font-semibold text-slate-600 mb-4 px-4 italic">
-                    &quot;Helping businesses generate measurable growth through digital marketing.&quot;
+                <p className={`text-primary font-bold ${isFounder ? 'mb-3 text-lg' : 'mb-2 text-base'}`}>{founder.role}</p>
+                {founder.quote && (
+                  <p className="text-sm font-bold text-slate-600 mb-4 px-4 italic">
+                    &quot;{founder.quote}&quot;
                   </p>
                 )}
-                <p className={`text-muted-foreground leading-relaxed max-w-sm ${isFounder ? 'text-base' : 'text-sm'}`}>
+                <p className={`text-slate-500 leading-relaxed max-w-sm ${isFounder ? 'text-base' : 'text-sm'}`}>
                   {founder.bio}
                 </p>
               </div>

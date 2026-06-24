@@ -23,13 +23,13 @@ export function Footer() {
                 className="h-14 md:h-20 w-auto object-contain hidden dark:block"
               />
             </Link>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-slate-500">
               Helping businesses grow through data-driven digital marketing, SEO, and targeted advertising.
             </p>
           </div>
           <div>
             <h3 className="font-semibold mb-4">Services</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <ul className="space-y-2 text-sm text-slate-500">
               <li><Link href="/#services" className="hover:text-primary">Website Development</Link></li>
               <li><Link href="/#services" className="hover:text-primary">SEO</Link></li>
               <li><Link href="/#services" className="hover:text-primary">Google & Meta Ads</Link></li>
@@ -38,7 +38,7 @@ export function Footer() {
           </div>
           <div>
             <h3 className="font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <ul className="space-y-2 text-sm text-slate-500">
               <li><Link href="/#industries" className="hover:text-primary">Industries</Link></li>
               <li><Link href="/#process" className="hover:text-primary">How We Work</Link></li>
               <li><Link href="/#work" className="hover:text-primary">Case Studies</Link></li>
@@ -49,7 +49,7 @@ export function Footer() {
           </div>
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <ul className="space-y-2 text-sm text-slate-500">
               {process.env.NEXT_PUBLIC_BUSINESS_EMAIL && (
                 <li><a href={`mailto:${process.env.NEXT_PUBLIC_BUSINESS_EMAIL}`} className="hover:text-primary transition-colors">{process.env.NEXT_PUBLIC_BUSINESS_EMAIL}</a></li>
               )}
@@ -63,7 +63,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
+        <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between text-sm text-slate-500">
           <p>© {new Date().getFullYear()} Aarotech. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link href="/privacy-policy" className="hover:text-primary">Privacy Policy</Link>

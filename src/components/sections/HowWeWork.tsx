@@ -2,31 +2,47 @@ import { processSteps } from "@/data/content";
 
 export function HowWeWork() {
   return (
-    <section id="process" className="py-24 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">The Roadmap to Predictable Growth</h2>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            A simple, transparent process to take your business from where it is to where it needs to be.
-          </p>
-        </div>
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-            {/* Connecting line for desktop */}
-            <div className="hidden md:block absolute top-12 left-0 w-full h-[2px] bg-slate-100 -z-10"></div>
+    <section id="process" className="py-24 bg-black text-white relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-16 lg:gap-8 items-center">
+          
+          <div className="flex flex-col space-y-12 relative z-10">
+            <div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">The Roadmap to Predictable Growth</h2>
+              <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-xl">
+                A simple, transparent process to take your business from where it is to where it needs to be.
+              </p>
+            </div>
             
-            {processSteps.map((step, index) => (
-              <div key={index} className="relative group">
-                <div className="bg-white mx-auto md:mx-0 w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-slate-50 flex items-center justify-center shadow-sm mb-6 relative group-hover:border-primary/20 transition-colors duration-300">
-                  <span className="text-xl md:text-2xl font-bold text-primary">{step.step}</span>
+            <div className="flex flex-col space-y-8 relative before:absolute before:inset-0 before:ml-7 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
+              {processSteps.map((step, index) => (
+                <div key={index} className="relative flex items-start gap-6 group">
+                  <div className="shrink-0 w-14 h-14 bg-black border border-white/10 text-slate-300 rounded-full flex items-center justify-center font-bold text-xl group-hover:bg-primary/20 group-hover:text-primary group-hover:border-primary/50 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.05)] group-hover:shadow-[0_0_20px_rgba(255,0,0,0.3)] z-10 relative">
+                    {step.step}
+                  </div>
+                  <div className="pt-3">
+                    <h3 className="text-xl font-bold mb-2 text-white group-hover:text-primary transition-colors">{step.title}</h3>
+                    <p className="text-slate-400 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-center md:text-left">{step.title}</h3>
-                <p className="text-sm md:text-base text-muted-foreground text-center md:text-left leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+
+          <div className="absolute inset-0 lg:static lg:flex justify-center items-center z-0 opacity-20 lg:opacity-100 pointer-events-none overflow-hidden lg:overflow-visible">
+            <video 
+              src="/animations/World%20Cube.mp4" 
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              preload="auto"
+              className="w-full h-full lg:max-w-none lg:w-[130%] object-cover lg:object-contain pointer-events-none mix-blend-screen will-change-transform"
+            />
+          </div>
+
         </div>
       </div>
     </section>

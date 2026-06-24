@@ -36,8 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} antialiased overscroll-none scroll-smooth`}>
-      <body className="min-h-screen flex flex-col pb-20 sm:pb-0 overflow-x-hidden overscroll-none bg-background">
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth" className={`${inter.variable} antialiased overscroll-none scroll-smooth`}>
+      <body suppressHydrationWarning className="min-h-screen flex flex-col pb-20 sm:pb-0 overflow-x-clip overscroll-none bg-background">
         {children}
         <WhatsAppButton />
         <MobileCTA />

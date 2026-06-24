@@ -161,6 +161,7 @@ export const founders = [
     fullName: "Suriyanarayanan",
     role: "Development & UX",
     bio: "Building lightning-fast, scalable, and beautifully designed websites focused entirely on user experience and lead generation.",
+    quote: "Performance is a feature. If your website isn't fast, you're losing customers before they even see your offer.",
     linkedin: "",
     photo: "/images/crew/suriyanarayanan.jpeg",
   },
@@ -169,6 +170,7 @@ export const founders = [
     fullName: "Aaron",
     role: "Founder & Lead Strategist",
     bio: "I don't believe in handing you off to a junior account manager. When you work with us, I personally oversee your strategy to ensure we are driving actual revenue, not just clicks.",
+    quote: "Helping businesses generate measurable growth through data-driven digital marketing.",
     linkedin: "",
     photo: "/images/crew/aaron.jpeg",
   },
@@ -177,6 +179,7 @@ export const founders = [
     fullName: "Susinthiran",
     role: "Video Editor & Creative",
     bio: "Crafting engaging, high-retention video content that captures attention, stops the scroll, and builds brand awareness.",
+    quote: "A good video doesn't just look pretty. It communicates your core value in the first three seconds.",
     linkedin: "",
     photo: "/images/crew/susinthiran.jpeg",
   },
@@ -186,52 +189,47 @@ export const testimonials: Array<{ id: string, quote: string, author: string, ro
   {
     id: "t1",
     quote: "Aarotech completely transformed our digital presence. We saw incredible results within the first quarter.",
-    author: "Client 1",
+    author: "Rahul Verma",
     role: "CEO",
     company: "Gleam",
     resultAchieved: "200% Increase in Leads",
     photo: "/images/client-logos/gleam.jpeg",
-    videoUrl: "/videos/testimonial-1.mp4"
   },
   {
     id: "t2",
     quote: "The level of communication and the quality of leads we've been getting is unmatched.",
-    author: "Client 2",
+    author: "Sneha Patel",
     role: "Founder",
     company: "Rose",
     resultAchieved: "Tripled Revenue in 6 Months",
     photo: "/images/client-logos/rose.jpeg",
-    videoUrl: "/videos/testimonial-2.mp4"
   },
   {
     id: "t3",
     quote: "Highly recommend them for anyone looking to scale their educational institution.",
-    author: "Client 3",
+    author: "Dr. Ananya Reddy",
     role: "Director",
     company: "Shine Academy",
     resultAchieved: "50% Higher Enrollment",
     photo: "/images/client-logos/shine-academy.jpeg",
-    videoUrl: "/videos/testimonial-3.mp4"
   },
   {
     id: "t4",
     quote: "They understand our brand perfectly and execute flawlessly on every campaign.",
-    author: "Client 4",
+    author: "Karthik Subramaniam",
     role: "Marketing Head",
     company: "Stepzy",
     resultAchieved: "150k+ New Followers",
     photo: "/images/client-logos/stepzy.jpeg",
-    videoUrl: "/videos/testimonial-4.mp4"
   },
   {
     id: "t5",
     quote: "Best agency we've worked with. Period. The ROI speaks for itself.",
-    author: "Client 5",
+    author: "Arjun Nair",
     role: "Operations Manager",
     company: "Tosh",
     resultAchieved: "Lowered CPA by 40%",
     photo: "/images/client-logos/tosh.jpeg",
-    videoUrl: "/videos/testimonial-5.mp4"
   }
 ];
 

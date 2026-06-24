@@ -42,26 +42,26 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white relative">
+    <section id="contact" className="py-24 bg-slate-950 text-white relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Ready to Grow?</h2>
-            <p className="text-lg text-muted-foreground mb-10">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">Ready to Grow?</h2>
+            <p className="text-lg text-slate-300 mb-10">
               Whether you need a free growth plan, a custom strategy, or just want to bounce some ideas around - Let&apos;s talk.
             </p>
 
             <div className="space-y-8 mb-12">
               {/* Contact information hidden until real details are provided */}
               {process.env.NEXT_PUBLIC_WHATSAPP_NUMBER && (
-                <div className="bg-[#25D366]/10 p-6 rounded-xl border border-[#25D366]/20">
-                  <h3 className="font-semibold text-slate-900 mb-2">Prefer WhatsApp?</h3>
-                  <p className="text-sm text-slate-600 mb-4">Chat directly with a founder and get answers instantly.</p>
+                <div className="bg-[#25D366]/10 p-6 rounded-2xl border border-[#25D366]/20">
+                  <h3 className="font-bold text-white mb-2">Prefer WhatsApp?</h3>
+                  <p className="text-sm text-slate-300 mb-4">Chat directly with a founder and get answers instantly.</p>
                   <a
                     href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi Aarotech, I would like a free growth plan for my business.")}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-[#25D366] text-white hover:bg-[#20bd5a]"
+                    className="inline-flex items-center justify-center rounded-xl text-sm font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-[#25D366] text-white hover:bg-[#20bd5a]"
                   >
                     Chat on WhatsApp
                   </a>
@@ -70,48 +70,48 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="bg-slate-50 p-8 md:p-10 rounded-2xl border border-slate-100 shadow-sm">
+          <div className="bg-slate-900 p-8 md:p-10 rounded-2xl border border-slate-800 shadow-xl">
             {isSuccess ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-12">
-                <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-green-500/10 text-green-400 rounded-full flex items-center justify-center mb-6">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Message Sent!</h3>
-                <p className="text-muted-foreground mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-white">Message Sent!</h3>
+                <p className="text-slate-300 mb-8">
                   Thank you for reaching out. We will get back to you with your free growth plan shortly.
                 </p>
-                <Button variant="outline" onClick={() => setIsSuccess(false)}>
+                <Button variant="outline" onClick={() => setIsSuccess(false)} className="rounded-xl border-slate-700 hover:bg-slate-800 text-white hover:text-white">
                   Send another message
                 </Button>
               </div>
             ) : (
               <>
-                <h3 className="text-2xl font-bold mb-6">Request Your Free Growth Plan</h3>
+                <h3 className="text-2xl font-bold mb-6 text-white">Request Your Free Growth Plan</h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Full Name</Label>
-                    <Input id="name" name="name" placeholder="John Doe" required className="bg-white" />
+                    <Label htmlFor="name" className="text-white">Full Name</Label>
+                    <Input id="name" name="name" placeholder="John Doe" required className="bg-slate-950 border-slate-800 text-white placeholder:text-slate-500" />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="businessName">Business Name</Label>
-                    <Input id="businessName" name="businessName" placeholder="Acme Corp" required className="bg-white" />
+                    <Label htmlFor="businessName" className="text-white">Business Name</Label>
+                    <Input id="businessName" name="businessName" placeholder="Acme Corp" required className="bg-slate-950 border-slate-800 text-white placeholder:text-slate-500" />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" name="email" type="email" placeholder="you@company.com" className="bg-white" />
+                    <Label htmlFor="email" className="text-white">Email Address</Label>
+                    <Input id="email" name="email" type="email" placeholder="you@company.com" className="bg-slate-950 border-slate-800 text-white placeholder:text-slate-500" />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number</Label>
-                    <Input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required className="bg-white" />
+                    <Label htmlFor="phone" className="text-white">Phone Number</Label>
+                    <Input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required className="bg-slate-950 border-slate-800 text-white placeholder:text-slate-500" />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="challenge">What is your biggest challenge right now?</Label>
+                    <Label htmlFor="challenge" className="text-white">What is your biggest challenge right now?</Label>
                     <Select name="challenge" required onValueChange={(val) => setSelectedChallenge(val ? String(val) : "")}>
-                      <SelectTrigger className="w-full bg-white">
+                      <SelectTrigger className="w-full bg-slate-950 border-slate-800 text-white">
                         <SelectValue placeholder="Select your biggest challenge..." />
                       </SelectTrigger>
                       <SelectContent>
@@ -126,12 +126,12 @@ export function Contact() {
 
                   {selectedChallenge === "Other" && (
                     <div className="space-y-2 animate-in fade-in slide-in-from-top-2 duration-300">
-                      <Label htmlFor="otherChallenge">Please specify your challenge</Label>
-                      <Input id="otherChallenge" name="otherChallenge" placeholder="Tell us more about your challenge..." required className="bg-white" />
+                      <Label htmlFor="otherChallenge" className="text-white">Please specify your challenge</Label>
+                      <Input id="otherChallenge" name="otherChallenge" placeholder="Tell us more about your challenge..." required className="bg-slate-950 border-slate-800 text-white placeholder:text-slate-500" />
                     </div>
                   )}
 
-                  <Button type="submit" size="lg" className="w-full text-base" disabled={isSubmitting}>
+                  <Button type="submit" size="lg" className="w-full text-base bg-primary text-white hover:bg-primary/90" disabled={isSubmitting}>
                     {isSubmitting ? "Sending..." : "Get My Free Growth Plan"}
                   </Button>
                 </form>
