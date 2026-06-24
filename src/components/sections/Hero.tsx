@@ -10,7 +10,10 @@ export function Hero() {
         <div className="flex flex-col lg:flex-row gap-12 items-center min-h-[70vh]">
           <div className="w-full lg:w-1/2 flex flex-col items-start text-left text-white relative z-10">
             <div className="inline-flex items-center rounded-full border border-white/20 px-3 py-1 text-sm text-white/80 mb-8 bg-white/10 backdrop-blur-sm">
-              <span className="flex h-2 w-2 rounded-full bg-green-400 mr-2"></span>
+              <span className="relative flex h-2 w-2 mr-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              </span>
               Accepting new clients
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight max-w-3xl mb-6">
@@ -28,7 +31,7 @@ export function Hero() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-white/90 font-medium">
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(255,0,0,0.8)]" />
@@ -50,15 +53,15 @@ export function Hero() {
           </div>
 
           <div className="absolute inset-0 lg:static lg:w-1/2 flex justify-center items-center z-0 opacity-40 lg:opacity-100 pointer-events-none overflow-hidden lg:overflow-visible">
-             <video 
-               src="/animations/Red%20Floating%20Cube.mp4" 
-               autoPlay 
-               loop 
-               muted 
-               playsInline 
-               preload="auto"
-               className="w-full h-full lg:h-[550px] object-cover pointer-events-none lg:scale-[1.35] mix-blend-screen lg:mix-blend-normal lg:[mask-image:radial-gradient(circle_at_center,black_50%,transparent_80%)] lg:[-webkit-mask-image:radial-gradient(circle_at_center,black_50%,transparent_80%)] will-change-transform"
-             />
+            <video
+              src="/animations/Red%20Floating%20Cube.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              className="w-full h-full lg:h-[550px] object-cover pointer-events-none lg:scale-[1.35] mix-blend-screen lg:mix-blend-normal lg:[mask-image:radial-gradient(circle_at_center,black_50%,transparent_80%)] lg:[-webkit-mask-image:radial-gradient(circle_at_center,black_50%,transparent_80%)] will-change-transform"
+            />
           </div>
         </div>
 

@@ -85,9 +85,17 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 ))}
               </ul>
             </div>
-            <div className="bg-slate-200 rounded-2xl aspect-video w-full flex items-center justify-center border-4 border-white shadow-lg overflow-hidden relative">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_0%,transparent_100%)] bg-slate-800"></div>
-              <service.icon className="w-24 h-24 text-slate-600/50" strokeWidth={1} />
+            <div className="bg-slate-50 rounded-2xl p-8 md:p-12 w-full border border-slate-200 shadow-sm relative group overflow-hidden flex flex-col items-center justify-center text-center aspect-video">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--color-primary)_0%,transparent_100%)] opacity-5 transition-opacity duration-500 group-hover:opacity-10"></div>
+              <div className="relative z-10">
+                <div className="w-20 h-20 mx-auto bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center mb-6 group-hover:-translate-y-2 transition-transform duration-500">
+                  <service.icon className="w-10 h-10 text-primary" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">{service.title}</h3>
+                <p className="text-slate-600 text-lg leading-relaxed max-w-sm mx-auto">
+                  {service.description}
+                </p>
+              </div>
             </div>
           </div>
 
