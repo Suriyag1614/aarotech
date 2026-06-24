@@ -48,7 +48,7 @@ export function Contact() {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Ready to Grow?</h2>
             <p className="text-lg text-muted-foreground mb-10">
-              Whether you need a free growth plan, a custom strategy, or just want to bounce some ideas around&mdash;let&apos;s talk.
+              Whether you need a free growth plan, a custom strategy, or just want to bounce some ideas around - Let&apos;s talk.
             </p>
 
             <div className="space-y-8 mb-12">
