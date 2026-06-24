@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-background pt-24 pb-32">
+    <section className="relative overflow-hidden bg-background pt-32 pb-32">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
         <div className="inline-flex items-center rounded-full border px-3 py-1 text-sm text-muted-foreground mb-8 bg-background/50 backdrop-blur-sm">
@@ -40,7 +40,7 @@ export function Hero() {
         <div className="mt-16 pt-8 border-t w-full max-w-4xl flex flex-col items-center">
           <p className="text-sm text-muted-foreground font-medium mb-6 uppercase tracking-wider">Specialized digital strategies for:</p>
           <div className="flex flex-wrap justify-center gap-4">
-            {["Healthcare", "Education", "Real Estate", "Manufacturing", "Local Businesses"].map((industry) => (
+            {["Healthcare", "Education", "Local Businesses"].map((industry) => (
               <span key={industry} className="px-4 py-2 rounded-full border bg-white text-sm font-medium text-slate-700 shadow-sm">
                 {industry}
               </span>

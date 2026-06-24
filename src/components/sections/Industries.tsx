@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function Industries() {
   return (
-    <section className="py-24 bg-slate-50">
+    <section id="industries" className="py-24 bg-slate-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">Who We Partner With</h2>

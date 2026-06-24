@@ -19,10 +19,10 @@ export function MeetFounders() {
           {founders.map((founder, index) => {
             const isFounder = index === 1;
             return (
-              <div key={index} className={`flex flex-col items-center text-center group ${isFounder ? 'md:-mt-8' : 'scale-90 opacity-90 hover:opacity-100 hover:scale-95 transition-all duration-300'}`}>
+              <div key={index} className={`flex flex-col items-center text-center group ${isFounder ? 'order-first md:order-none md:-mt-8' : 'scale-90 opacity-90 hover:opacity-100 hover:scale-95 transition-all duration-300'}`}>
                 <div className={`${isFounder ? 'w-48 h-48 md:w-56 md:h-56' : 'w-32 h-32 md:w-40 md:h-40'} rounded-full bg-slate-200 mb-6 overflow-hidden relative flex items-center justify-center text-slate-500 border-4 border-white shadow-lg group-hover:border-primary/20 transition-all duration-300`}>
                   {founder.photo ? (
-                    <Image src={founder.photo} alt={founder.name} fill className="object-cover" />
+                    <Image src={founder.photo} alt={founder.name} fill sizes="(max-width: 768px) 160px, 224px" className="object-cover" />
                   ) : (
                     <div className="text-3xl font-extrabold text-slate-300">
                       {founder.name.charAt(0)}
@@ -38,13 +38,13 @@ export function MeetFounders() {
                     </a>
                   )}
                 </div>
-                <p className={`text-primary font-medium ${isFounder ? 'mb-3' : 'mb-2 text-sm'}`}>{founder.role}</p>
+                <p className={`text-primary font-medium ${isFounder ? 'mb-3 text-lg' : 'mb-2 text-base'}`}>{founder.role}</p>
                 {isFounder && (
                   <p className="text-sm font-semibold text-slate-600 mb-4 px-4 italic">
                     &quot;Helping businesses generate measurable growth through digital marketing.&quot;
                   </p>
                 )}
-                <p className={`text-muted-foreground leading-relaxed max-w-sm ${isFounder ? 'text-sm' : 'text-xs'}`}>
+                <p className={`text-muted-foreground leading-relaxed max-w-sm ${isFounder ? 'text-base' : 'text-sm'}`}>
                   {founder.bio}
                 </p>
               </div>

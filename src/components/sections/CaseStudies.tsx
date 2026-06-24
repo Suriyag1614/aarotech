@@ -28,6 +28,7 @@ export function CaseStudies() {
                     src={study.image} 
                     alt={`${study.clientIndustry} case study`} 
                     fill 
+                    sizes="(max-width: 1024px) 100vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105" 
                   />
                 ) : (

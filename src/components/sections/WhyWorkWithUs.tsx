@@ -62,7 +62,7 @@ export function WhyWorkWithUs() {
           <div className="relative">
             <div className="aspect-[4/2.8] bg-slate-100 rounded-3xl overflow-hidden relative border-8 border-white shadow-xl">
               <Image
-                src="/images/office.jpeg"
+                src="/images/showcase/office.jpeg"
                 alt="Aarotech office and team working"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

@@ -1,0 +1,37 @@
+import Image from "next/image";
+
+const clients = [
+  { id: "c1", name: "Gleam", logo: "/images/client-logos/gleam.jpeg" },
+  { id: "c2", name: "Rose", logo: "/images/client-logos/rose.jpeg" },
+  { id: "c3", name: "Shine Academy", logo: "/images/client-logos/shine-academy.jpeg" },
+  { id: "c4", name: "Stepzy", logo: "/images/client-logos/stepzy.jpeg" },
+  { id: "c5", name: "Tosh", logo: "/images/client-logos/tosh.jpeg" },
+];
+
+export function ClientLogos() {
+  return (
+    <section className="py-12 border-b bg-slate-50/50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <p className="text-center text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-8">
+          Trusted by ambitious brands
+        </p>
+        <div className="relative flex overflow-hidden group">
+          <div className="animate-marquee gap-8 md:gap-16 lg:gap-24 opacity-70 group-hover:opacity-100 transition-opacity duration-500 pr-8 md:pr-16 lg:pr-24">
+            {[...clients, ...clients].map((client, index) => (
+              <div key={`${client.id}-${index}`} className="relative w-28 h-16 sm:w-32 sm:h-20 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105 shrink-0">
+                <Image
+                  src={client.logo}
+                  alt={`${client.name} logo`}
+                  fill
+                  sizes="(max-width: 640px) 112px, 128px"
+                  className="object-contain mix-blend-multiply"
+                  unoptimized={true}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

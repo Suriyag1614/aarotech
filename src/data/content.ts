@@ -93,28 +93,6 @@ export const industries = [
     cta: "Increase Enrollments"
   },
   {
-    id: "real-estate",
-    title: "Real Estate",
-    problem: "Relying on unpredictable referrals and expensive third-party portals.",
-    solution: "We generate exclusive, high-intent leads through targeted advertising and optimized landing pages.",
-    h1: "Lead Generation for Real Estate Developers",
-    intro: "Stop fighting for shared leads. We build systems that generate exclusive, high-intent property buyers.",
-    benefits: ["Exclusive lead generation", "High-converting property landing pages", "CRM integration"],
-    faqs: [{ question: "What is a typical CPL?", answer: "Cost per lead varies wildly by property ticket size, but we focus on lowering Cost Per Acquisition." }],
-    cta: "Get More Property Leads"
-  },
-  {
-    id: "manufacturing",
-    title: "Manufacturing & B2B",
-    problem: "Invisible to potential B2B buyers searching for suppliers online.",
-    solution: "We optimize your digital presence for B2B search intent to capture high-value contracts.",
-    h1: "B2B Digital Marketing for Manufacturers",
-    intro: "Modernize your sales pipeline by capturing high-intent B2B search traffic.",
-    benefits: ["Complex product SEO", "Long-cycle lead nurturing", "Professional B2B website design"],
-    faqs: [{ question: "Do you understand industrial buyers?", answer: "Yes, we map out the entire procurement decision journey." }],
-    cta: "Transform B2B Sales"
-  },
-  {
     id: "local-businesses",
     title: "Local Businesses",
     problem: "Losing foot traffic to competitors with stronger online visibility.",
@@ -157,7 +135,7 @@ export const caseStudies = [
     challenge: "The hospital faced very low physical walk-ins and was losing patients to heavy local competition.",
     solution: "We deployed a comprehensive trust-building content strategy to establish medical authority, paired with an aggressive local visibility campaign to drive high footfalls.",
     outcome: "Increased physical walk-ins by 210% and established a dominant local search presence, drastically reducing reliance on traditional marketing.",
-    image: "/images/orthopedic.jpeg",
+    image: "/images/showcase/orthopedic.jpeg",
   },
   {
     id: "cs-2",
@@ -165,7 +143,7 @@ export const caseStudies = [
     challenge: "Started with extremely low initial footfalls and had weak local visibility for their primary services.",
     solution: "Launched hyper-targeted Meta Ads, fully optimized their Google My Business (GMB) profile, and set up direct lead generation campaigns.",
     outcome: "Achieved a 300% increase in local foot traffic and generated 200+ highly qualified service leads within the first 60 days.",
-    image: "/images/services.jpeg",
+    image: "/images/showcase/services.jpeg",
   },
   {
     id: "cs-3",
@@ -173,7 +151,7 @@ export const caseStudies = [
     challenge: "Struggling to attract new daily patients and competing against long-established clinics in their immediate vicinity.",
     solution: "Executed highly targeted performance marketing campaigns and optimized their local search presence to immediately gain patient trust.",
     outcome: "Generated a consistent flow of 70+ new patient consultations per week, effectively doubling their monthly revenue.",
-    image: "/images/skincare.jpeg",
+    image: "/images/showcase/skincare.jpeg",
   },
 ];
 
@@ -184,7 +162,7 @@ export const founders = [
     role: "Development & UX",
     bio: "Building lightning-fast, scalable, and beautifully designed websites focused entirely on user experience and lead generation.",
     linkedin: "",
-    photo: "/images/suriyanarayanan.jpeg",
+    photo: "/images/crew/suriyanarayanan.jpeg",
   },
   {
     name: "Aaron",
@@ -192,7 +170,7 @@ export const founders = [
     role: "Founder & Lead Strategist",
     bio: "I don't believe in handing you off to a junior account manager. When you work with us, I personally oversee your strategy to ensure we are driving actual revenue, not just clicks.",
     linkedin: "",
-    photo: "/images/aaron.jpeg",
+    photo: "/images/crew/aaron.jpeg",
   },
   {
     name: "Susinthiran",
@@ -200,11 +178,62 @@ export const founders = [
     role: "Video Editor & Creative",
     bio: "Crafting engaging, high-retention video content that captures attention, stops the scroll, and builds brand awareness.",
     linkedin: "",
-    photo: "/images/susinthiran.jpeg",
+    photo: "/images/crew/susinthiran.jpeg",
   },
 ];
 
-export const testimonials: Array<{ id: string, quote: string, author: string, role: string }> = [];
+export const testimonials: Array<{ id: string, quote: string, author: string, role: string, company?: string, resultAchieved?: string, photo?: string, videoUrl?: string }> = [
+  {
+    id: "t1",
+    quote: "Aarotech completely transformed our digital presence. We saw incredible results within the first quarter.",
+    author: "Client 1",
+    role: "CEO",
+    company: "Gleam",
+    resultAchieved: "200% Increase in Leads",
+    photo: "/images/client-logos/gleam.jpeg",
+    videoUrl: "/videos/testimonial-1.mp4"
+  },
+  {
+    id: "t2",
+    quote: "The level of communication and the quality of leads we've been getting is unmatched.",
+    author: "Client 2",
+    role: "Founder",
+    company: "Rose",
+    resultAchieved: "Tripled Revenue in 6 Months",
+    photo: "/images/client-logos/rose.jpeg",
+    videoUrl: "/videos/testimonial-2.mp4"
+  },
+  {
+    id: "t3",
+    quote: "Highly recommend them for anyone looking to scale their educational institution.",
+    author: "Client 3",
+    role: "Director",
+    company: "Shine Academy",
+    resultAchieved: "50% Higher Enrollment",
+    photo: "/images/client-logos/shine-academy.jpeg",
+    videoUrl: "/videos/testimonial-3.mp4"
+  },
+  {
+    id: "t4",
+    quote: "They understand our brand perfectly and execute flawlessly on every campaign.",
+    author: "Client 4",
+    role: "Marketing Head",
+    company: "Stepzy",
+    resultAchieved: "150k+ New Followers",
+    photo: "/images/client-logos/stepzy.jpeg",
+    videoUrl: "/videos/testimonial-4.mp4"
+  },
+  {
+    id: "t5",
+    quote: "Best agency we've worked with. Period. The ROI speaks for itself.",
+    author: "Client 5",
+    role: "Operations Manager",
+    company: "Tosh",
+    resultAchieved: "Lowered CPA by 40%",
+    photo: "/images/client-logos/tosh.jpeg",
+    videoUrl: "/videos/testimonial-5.mp4"
+  }
+];
 
 export const faqs = [
   {
@@ -221,7 +250,7 @@ export const faqs = [
   },
   {
     question: "What industries do you specialize in?",
-    answer: "While we have deep expertise in Healthcare, Education, Real Estate, and Manufacturing, our data-driven approach allows us to effectively market almost any B2B or B2C business.",
+    answer: "While we have deep expertise in Healthcare and Education, our data-driven approach allows us to effectively market almost any B2B or B2C business.",
   },
   {
     question: "How do reporting and communication work?",
