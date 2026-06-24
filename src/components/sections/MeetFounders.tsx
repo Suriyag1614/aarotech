@@ -1,6 +1,6 @@
 import { founders } from "@/data/content";
 import { Link as LinkIcon } from "lucide-react";
-import Image from "next/image";
+import { FallbackImage as Image } from "@/components/ui/fallback-image";
 
 export function MeetFounders() {
   return (

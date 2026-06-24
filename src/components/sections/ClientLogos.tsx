@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { FallbackImage as Image } from "@/components/ui/fallback-image";
 
 const clients = [
   { id: "c1", name: "Gleam", logo: "/images/client-logos/gleam.jpeg" },

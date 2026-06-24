@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { FallbackImage as Image } from "@/components/ui/fallback-image";
 
 export function Footer() {
   return (
@@ -9,14 +9,14 @@ export function Footer() {
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Image
-                src="/images/header-logo-light.png"
+                src="/images/aarotech-logos/header-logo-light.png"
                 alt="Aarotech"
                 width={240}
                 height={70}
                 className="h-14 md:h-20 w-auto object-contain block dark:hidden"
               />
               <Image
-                src="/images/header-logo-dark.png"
+                src="/images/aarotech-logos/header-logo-dark.png"
                 alt="Aarotech"
                 width={240}
                 height={70}

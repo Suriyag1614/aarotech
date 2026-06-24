@@ -1,5 +1,5 @@
 import { CheckCircle, XCircle } from "lucide-react";
-import Image from "next/image";
+import { FallbackImage as Image } from "@/components/ui/fallback-image";
 
 export function WhyWorkWithUs() {
   const comparisons = [

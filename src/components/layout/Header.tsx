@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { FallbackImage as Image } from "@/components/ui/fallback-image";
 import { usePathname } from "next/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -56,7 +56,7 @@ export function Header() {
         <div className="flex gap-2 items-center">
           <Link href="/" className="flex items-center space-x-2">
             <Image 
-              src="/images/header-logo-light.png" 
+              src="/images/aarotech-logos/header-logo-light.png" 
               alt="Aarotech" 
               width={200} 
               height={60} 
@@ -64,7 +64,7 @@ export function Header() {
               priority
             />
             <Image 
-              src="/images/header-logo-dark.png" 
+              src="/images/aarotech-logos/header-logo-dark.png" 
               alt="Aarotech" 
               width={200} 
               height={60} 

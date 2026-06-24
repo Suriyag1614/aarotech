@@ -1,5 +1,5 @@
 import { testimonials } from "@/data/content";
-import Image from "next/image";
+import { FallbackImage as Image } from "@/components/ui/fallback-image";
 import { TrendingUp } from "lucide-react";
 
 export function Testimonials() {

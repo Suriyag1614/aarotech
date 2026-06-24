@@ -2,7 +2,7 @@ import { caseStudies } from "@/data/content";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, LayoutTemplate } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
+import { FallbackImage as Image } from "@/components/ui/fallback-image";
 
 export function CaseStudies() {
   return (
