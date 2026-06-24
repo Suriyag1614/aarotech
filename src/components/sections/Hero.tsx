@@ -23,7 +23,7 @@ export function Hero() {
               We help businesses generate more leads, improve online visibility, and grow revenue through high-converting websites, SEO, advertising, and social media.
             </p>
             <p className="text-sm font-bold text-white/70 uppercase tracking-wider mb-10">
-              Proudly partnering with businesses in Chennai, Coimbatore, Madurai, Trichy, & across TN.
+              Proudly partnering with businesses in Trichy, Chennai, Coimbatore, Madurai, & across TN.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-8">
               <Link href={process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ? `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi Aarotech, I would like a free growth plan for my business.")}` : "/#contact"} className={`${buttonVariants({ size: "lg", className: "h-14 px-8 text-base shadow-xl hover:shadow-primary/25 hover:-translate-y-1 transition-all" })} bg-primary text-white hover:bg-primary/90`}>
