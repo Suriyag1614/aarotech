@@ -15,7 +15,7 @@ export function Industries() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {industries.map((industry) => (
-            <Link href={`/industries/${industry.id}`} key={industry.id} className="block group">
+            <Link href={`/industries/${industry.id}`} key={industry.id} className="block group focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-2xl">
               <Card className="h-full border border-slate-200 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1 rounded-2xl bg-white">
                 <CardContent className="p-6 sm:p-8 flex flex-col h-full">
                   <h3 className="text-2xl font-bold mb-8 text-slate-900 group-hover:text-primary transition-colors">{industry.title}</h3>

@@ -30,21 +30,21 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-sm text-slate-500">
-              <li><Link href="/#services" className="hover:text-primary">Website Development</Link></li>
-              <li><Link href="/#services" className="hover:text-primary">SEO</Link></li>
-              <li><Link href="/#services" className="hover:text-primary">Google & Meta Ads</Link></li>
-              <li><Link href="/#services" className="hover:text-primary">Branding</Link></li>
+              <li><Link href="/#services" className="hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">Website Development</Link></li>
+              <li><Link href="/#services" className="hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">SEO</Link></li>
+              <li><Link href="/#services" className="hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">Google & Meta Ads</Link></li>
+              <li><Link href="/#services" className="hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">Branding</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-sm text-slate-500">
-              <li><Link href="/#industries" className="hover:text-primary">Industries</Link></li>
-              <li><Link href="/#process" className="hover:text-primary">How We Work</Link></li>
-              <li><Link href="/#work" className="hover:text-primary">Case Studies</Link></li>
-              <li><Link href="/#testimonials" className="hover:text-primary">Testimonials</Link></li>
-              <li><Link href="/#about" className="hover:text-primary">About Us</Link></li>
-              <li><Link href="/#faq" className="hover:text-primary">FAQ</Link></li>
+              <li><Link href="/#industries" className="hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">Industries</Link></li>
+              <li><Link href="/#process" className="hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">How We Work</Link></li>
+              <li><Link href="/#work" className="hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">Case Studies</Link></li>
+              <li><Link href="/#testimonials" className="hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">Testimonials</Link></li>
+              <li><Link href="/#about" className="hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">About Us</Link></li>
+              <li><Link href="/#faq" className="hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">FAQ</Link></li>
             </ul>
           </div>
           <div>
@@ -66,8 +66,8 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between text-sm text-slate-500">
           <p>© {new Date().getFullYear()} Aarotech. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link href="/privacy-policy" className="hover:text-primary">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-primary">Terms of Service</Link>
+            <Link href="/privacy-policy" className="hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">Terms of Service</Link>
           </div>
         </div>
       </div>

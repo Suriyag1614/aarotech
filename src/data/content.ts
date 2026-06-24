@@ -8,7 +8,7 @@ export const services = [
     icon: Video,
     h1: "High-Quality Content Creation Services",
     intro: "We produce engaging video, image, and text content that stops the scroll and drives meaningful interaction.",
-    benefits: ["Benefit 1: High-retention video editing", "Benefit 2: Engaging copywriting", "Benefit 3: Professional visual design"],
+    benefits: ["High-retention video editing that keeps viewers watching", "Engaging copywriting that speaks to your audience", "Professional visual design that elevates your brand"],
     faqs: [{ question: "Do you shoot videos?", answer: "We focus on post-production and editing high-quality supplied footage." }],
     cta: "Start Creating Content"
   },
@@ -19,7 +19,7 @@ export const services = [
     icon: Code,
     h1: "Organic Social Media Management",
     intro: "Grow an engaged following and build trust through consistent, high-quality organic social media content.",
-    benefits: ["Benefit 1: Consistent posting schedule", "Benefit 2: Community engagement", "Benefit 3: Brand voice development"],
+    benefits: ["Consistent, high-quality posting schedule", "Active community engagement to foster loyalty", "Authentic brand voice development"],
     faqs: [{ question: "Which platforms do you handle?", answer: "We specialize in Instagram, Facebook, LinkedIn, and Twitter." }],
     cta: "Elevate Your Social Presence"
   },
@@ -30,7 +30,7 @@ export const services = [
     icon: Megaphone,
     h1: "High-ROI Digital Advertising Campaigns",
     intro: "Capture high-intent searchers on Google and build massive brand awareness on Meta to generate qualified leads.",
-    benefits: ["Benefit 1: Advanced keyword and audience targeting", "Benefit 2: Conversion rate optimization", "Benefit 3: Transparent ROI reporting"],
+    benefits: ["Advanced keyword and audience targeting", "Relentless conversion rate optimization", "Fully transparent reporting on your ROI"],
     faqs: [{ question: "Do you handle both Meta and Google?", answer: "Yes, we create omni-channel strategies using both platforms to maximize your return on ad spend." }],
     cta: "Get a Free Ads Audit"
   },
@@ -41,7 +41,7 @@ export const services = [
     icon: PenTool,
     h1: "Premium Brand Identity Design",
     intro: "Look like an industry leader with a cohesive, professional brand identity that builds immediate trust.",
-    benefits: ["Benefit 1: Logo and visual identity", "Benefit 2: Brand guidelines creation", "Benefit 3: Marketing collateral design"],
+    benefits: ["Memorable logo and visual identity design", "Comprehensive brand guidelines", "Stunning marketing collateral"],
     faqs: [{ question: "Do you do rebranding?", answer: "Yes, we help established businesses refresh their look for the modern digital era." }],
     cta: "Transform Your Brand"
   },
@@ -52,7 +52,7 @@ export const services = [
     icon: LayoutTemplate,
     h1: "High-Converting Website Development",
     intro: "We build fast, scalable, and beautifully designed websites focused on lead generation and user experience.",
-    benefits: ["Benefit 1: Lightning fast load times", "Benefit 2: Mobile-first responsive design", "Benefit 3: SEO-optimized architecture"],
+    benefits: ["Lightning fast, optimized load times", "Flawless mobile-first responsive design", "Built-in SEO architecture from day one"],
     faqs: [{ question: "How long does it take?", answer: "Usually 4-6 weeks depending on complexity." }],
     cta: "Get a Web Dev Quote"
   },
@@ -63,7 +63,7 @@ export const services = [
     icon: Search,
     h1: "SEO Services to Dominate Local Search",
     intro: "Stop paying for every click. Build long-term organic traffic with our proven SEO methodologies.",
-    benefits: ["Benefit 1: Technical SEO audits", "Benefit 2: High-quality link building", "Benefit 3: Local Google Business Profile optimization"],
+    benefits: ["Comprehensive technical SEO audits", "High-quality, authoritative link building", "Google Business Profile optimization for local search"],
     faqs: [{ question: "When will I see results?", answer: "SEO is a long-term strategy, typically showing significant movement in 3-6 months." }],
     cta: "Start Your SEO Campaign"
   },
@@ -77,7 +77,7 @@ export const industries = [
     solution: "We build trust-focused websites and run targeted local SEO and Google Ads to connect you with patients seeking care.",
     h1: "Digital Marketing for Healthcare Clinics",
     intro: "Attract more patients and build trust before they even step into your waiting room.",
-    benefits: ["HIPAA compliant practices", "Local SEO for 'near me' searches", "Patient trust building"],
+    benefits: ["Strict HIPAA compliant marketing practices", "Local SEO dominance for 'near me' patient searches", "Strategies built around establishing patient trust"],
     faqs: [{ question: "Do you understand medical advertising rules?", answer: "Yes, we navigate platform restrictions carefully." }],
     cta: "Get a Healthcare Growth Plan"
   },
@@ -88,7 +88,7 @@ export const industries = [
     solution: "We implement lead-generation funnels and Meta Ads to reach parents and students effectively.",
     h1: "Digital Marketing for Schools & Colleges",
     intro: "Maximize your admissions season with targeted lead generation campaigns.",
-    benefits: ["Enrollment-focused funnels", "Parent demographic targeting", "Brand reputation management"],
+    benefits: ["Funnels specifically designed to increase enrollments", "Precise parent and student demographic targeting", "Proactive brand reputation management"],
     faqs: [{ question: "Can you handle seasonal enrollment spikes?", answer: "Yes, we plan campaigns months in advance for peak admissions." }],
     cta: "Increase Enrollments"
   },
@@ -99,7 +99,7 @@ export const industries = [
     solution: "We dominate local search results (Google Business Profile) to ensure you're the top choice in your area.",
     h1: "Local SEO & Ads for Retail Businesses",
     intro: "Dominate your neighborhood and become the #1 choice when locals search for your services.",
-    benefits: ["Google Business Profile optimization", "Local keyword dominance", "Foot traffic tracking"],
+    benefits: ["Complete Google Business Profile optimization", "Dominating local keywords in your neighborhood", "Accurate foot traffic and lead tracking"],
     faqs: [{ question: "Do I need a big budget?", answer: "No, local SEO provides massive ROI even for single-location shops." }],
     cta: "Dominate Local Search"
   },
@@ -132,7 +132,7 @@ export const caseStudies = [
   {
     id: "cs-1",
     clientIndustry: "Healthcare Client (Orthopedic)",
-    challenge: "The hospital faced very low physical walk-ins and was losing patients to heavy local competition.",
+    challenge: "The Clinic faced very low physical walk-ins and was losing patients to heavy local competition.",
     solution: "We deployed a comprehensive trust-building content strategy to establish medical authority, paired with an aggressive local visibility campaign to drive high footfalls.",
     outcome: "Increased physical walk-ins by 210% and established a dominant local search presence, drastically reducing reliance on traditional marketing.",
     image: "/images/showcase/orthopedic.jpeg",

@@ -57,13 +57,13 @@ export function Header() {
           </Link>
         </div>
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-base font-bold">
-          <Link href="/#services" onClick={handleScroll} className="transition-colors hover:text-primary text-slate-700">Services</Link>
-          <Link href="/#industries" onClick={handleScroll} className="transition-colors hover:text-primary text-slate-700">Industries</Link>
-          <Link href="/#process" onClick={handleScroll} className="transition-colors hover:text-primary text-slate-700">Process</Link>
-          <Link href="/#work" onClick={handleScroll} className="transition-colors hover:text-primary text-slate-700">Case Studies</Link>
-          <Link href="/#testimonials" onClick={handleScroll} className="transition-colors hover:text-primary text-slate-700">Testimonials</Link>
-          <Link href="/#about" onClick={handleScroll} className="transition-colors hover:text-primary text-slate-700">About</Link>
-          <Link href="/#faq" onClick={handleScroll} className="transition-colors hover:text-primary text-slate-700">FAQ</Link>
+          <Link href="/#services" onClick={handleScroll} className="transition-colors hover:text-primary text-slate-700 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">Services</Link>
+          <Link href="/#industries" onClick={handleScroll} className="transition-colors hover:text-primary text-slate-700 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">Industries</Link>
+          <Link href="/#process" onClick={handleScroll} className="transition-colors hover:text-primary text-slate-700 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">Process</Link>
+          <Link href="/#work" onClick={handleScroll} className="transition-colors hover:text-primary text-slate-700 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">Case Studies</Link>
+          <Link href="/#testimonials" onClick={handleScroll} className="transition-colors hover:text-primary text-slate-700 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">Testimonials</Link>
+          <Link href="/#about" onClick={handleScroll} className="transition-colors hover:text-primary text-slate-700 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">About</Link>
+          <Link href="/#faq" onClick={handleScroll} className="transition-colors hover:text-primary text-slate-700 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">FAQ</Link>
         </nav>
         <div className="hidden sm:flex items-center gap-4">
           <Link href="/#contact" onClick={handleScroll} className={buttonVariants({ size: "lg", className: "text-base font-semibold px-6 xl:px-8" })}>Get My Free Growth Plan</Link>
@@ -81,13 +81,13 @@ export function Header() {
       {isMobileMenuOpen && (
         <div className="lg:hidden border-t bg-background absolute w-full shadow-lg h-[calc(100dvh-80px)] overflow-y-auto">
           <nav className="flex flex-col items-center gap-4 pt-8 pb-32 text-base font-medium">
-            <Link href="/#services" onClick={handleScroll} className="transition-colors hover:text-primary text-foreground w-full text-center py-2">Services</Link>
-            <Link href="/#industries" onClick={handleScroll} className="transition-colors hover:text-primary text-foreground w-full text-center py-2">Industries</Link>
-            <Link href="/#process" onClick={handleScroll} className="transition-colors hover:text-primary text-foreground w-full text-center py-2">Process</Link>
-            <Link href="/#work" onClick={handleScroll} className="transition-colors hover:text-primary text-foreground w-full text-center py-2">Case Studies</Link>
-            <Link href="/#testimonials" onClick={handleScroll} className="transition-colors hover:text-primary text-foreground w-full text-center py-2">Testimonials</Link>
-            <Link href="/#about" onClick={handleScroll} className="transition-colors hover:text-primary text-foreground w-full text-center py-2">About</Link>
-            <Link href="/#faq" onClick={handleScroll} className="transition-colors hover:text-primary text-foreground w-full text-center py-2">FAQ</Link>
+            <Link href="/#services" onClick={handleScroll} className="transition-colors hover:text-primary text-foreground w-full text-center py-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">Services</Link>
+            <Link href="/#industries" onClick={handleScroll} className="transition-colors hover:text-primary text-foreground w-full text-center py-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">Industries</Link>
+            <Link href="/#process" onClick={handleScroll} className="transition-colors hover:text-primary text-foreground w-full text-center py-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">Process</Link>
+            <Link href="/#work" onClick={handleScroll} className="transition-colors hover:text-primary text-foreground w-full text-center py-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">Case Studies</Link>
+            <Link href="/#testimonials" onClick={handleScroll} className="transition-colors hover:text-primary text-foreground w-full text-center py-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">Testimonials</Link>
+            <Link href="/#about" onClick={handleScroll} className="transition-colors hover:text-primary text-foreground w-full text-center py-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">About</Link>
+            <Link href="/#faq" onClick={handleScroll} className="transition-colors hover:text-primary text-foreground w-full text-center py-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">FAQ</Link>
           </nav>
         </div>
       )}
