@@ -64,12 +64,12 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-red-50 rounded-2xl p-8 border border-red-100">
-              <div className="flex items-center mb-4 text-red-600">
+            <div className="bg-primary/5 rounded-2xl p-8 border border-primary/20">
+              <div className="flex items-center mb-4 text-primary">
                 <AlertTriangle className="w-6 h-6 mr-2" />
                 <h3 className="text-xl font-bold">The Problem</h3>
               </div>
-              <p className="text-red-900/80 text-lg leading-relaxed">{industry.problem}</p>
+              <p className="text-foreground/80 text-lg leading-relaxed">{industry.problem}</p>
             </div>
             <div className="bg-green-50 rounded-2xl p-8 border border-green-100">
               <div className="flex items-center mb-4 text-green-600">

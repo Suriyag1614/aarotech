@@ -75,7 +75,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 {(service.benefits || [
                   "Data-driven strategies tailored to your specific goals.",
                   "Transparent reporting on ROI and key metrics.",
-                  "No generic templates—everything is custom-built.",
+                  "No generic templates, everything is custom-built.",
                   "Founder-led execution to ensure the highest quality."
                 ]).map((point, index) => (
                   <li key={index} className="flex items-start">

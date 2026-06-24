@@ -119,7 +119,7 @@ export const processSteps = [
   {
     step: "03",
     title: "Campaign Launch",
-    description: "We build and execute your campaigns—from high-converting landing pages to targeted ads and local SEO.",
+    description: "We build and execute your campaigns from high-converting landing pages to targeted ads and local SEO.",
   },
   {
     step: "04",

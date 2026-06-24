@@ -10,7 +10,7 @@ export function Industries() {
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">Who We Partner With</h2>
           <p className="text-lg md:text-xl text-slate-500 leading-relaxed">
-            We understand the exact bottlenecks holding your industry back—and we know how to fix them.
+            We understand the exact bottlenecks holding your industry back and we know how to fix them.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
