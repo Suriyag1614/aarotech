@@ -25,6 +25,12 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
       return;
     }
 
+    // Validate challenge selection
+    if (!selectedChallenge) {
+      alert("Please select your biggest challenge.");
+      return;
+    }
+
     // Re-validate phone at submit time
     const phoneVal = (e.currentTarget.elements.namedItem("phone") as HTMLInputElement)?.value.trim();
     const digits = phoneVal.replace(/\D/g, "");

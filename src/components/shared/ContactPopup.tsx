@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { X } from "lucide-react";
 import {
   Dialog,
@@ -17,41 +17,58 @@ export function ContactPopup({
   onOpenChange?: (open: boolean) => void;
 }) {
   const [open, setOpen] = useState(false);
+  const [formKey, setFormKey] = useState(0);
+  const successTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleOpenChange = (val: boolean) => {
     setOpen(val);
     onOpenChange?.(val);
-  };
-
-  // Lock body scroll when dialog is open to prevent background page jumping
-  useEffect(() => {
-    if (open) {
-      const scrollY = window.scrollY;
-      document.body.style.position = "fixed";
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.width = "100%";
-      document.body.style.overflowY = "scroll";
+    if (val) {
+      setFormKey((k) => k + 1);
     } else {
-      const scrollY = document.body.style.top;
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.width = "";
-      document.body.style.overflowY = "";
-      if (scrollY) {
-        window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      if (successTimerRef.current) {
+        clearTimeout(successTimerRef.current);
+        successTimerRef.current = null;
       }
     }
+  };
+
+  // Scroll lock: lock the <html> element so the page can't scroll behind the modal.
+  // Avoids the position:fixed trick which conflicts with scroll-smooth on <html>.
+  useEffect(() => {
+    if (!open) return;
+
+    const scrollY = window.scrollY;
+    const html = document.documentElement;
+
+    // Lock scroll without moving the page
+    html.style.overflow = "hidden";
+    html.style.scrollBehavior = "auto"; // disable smooth scroll while locked
+
     return () => {
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.width = "";
-      document.body.style.overflowY = "";
+      // Kill smooth scroll temporarily so the restore is instant, not animated
+      html.style.scrollBehavior = "auto";
+      html.style.overflow = "";
+
+      // Restore scroll position instantly
+      window.scrollTo({ top: scrollY, behavior: "instant" as ScrollBehavior });
+
+      // Re-enable smooth scroll after a tick
+      requestAnimationFrame(() => {
+        html.style.scrollBehavior = "";
+      });
     };
   }, [open]);
 
+  const handleSuccess = () => {
+    successTimerRef.current = setTimeout(() => {
+      handleOpenChange(false);
+      successTimerRef.current = null;
+    }, 3000);
+  };
+
   return (
     <>
-      {/* Stop propagation so clicks on the trigger don't bubble weirdly */}
       <span
         onClick={(e) => {
           e.stopPropagation();
@@ -70,11 +87,9 @@ export function ContactPopup({
             max-sm:top-auto max-sm:bottom-0 max-sm:left-0 max-sm:right-0 max-sm:translate-x-0 max-sm:translate-y-0
             max-sm:w-full max-sm:max-w-full max-sm:rounded-b-none max-sm:rounded-t-2xl
           "
-          // Stop all clicks inside dialog from bubbling to the page
           onClick={(e) => e.stopPropagation()}
         >
           <DialogTitle className="sr-only">Request Your Free Growth Plan</DialogTitle>
-          {/* Sticky header with title + close button */}
           <div className="flex items-center justify-between px-5 sm:px-8 pt-6 pb-4 border-b border-slate-800 shrink-0">
             <h2 className="text-lg font-bold text-white">Request Your Free Growth Plan</h2>
             <button
@@ -86,7 +101,7 @@ export function ContactPopup({
             </button>
           </div>
           <div className="p-5 sm:p-8 overflow-y-auto flex-1">
-            <ContactForm onSuccess={() => setTimeout(() => handleOpenChange(false), 3000)} />
+            <ContactForm key={formKey} onSuccess={handleSuccess} />
           </div>
         </DialogContent>
       </Dialog>
