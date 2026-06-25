@@ -159,7 +159,7 @@ export const founders = [
   {
     name: "Suriyanarayanan",
     fullName: "Suriyanarayanan",
-    role: "Web Development & Data Analytics",
+    role: "Full Stack Developer & Data Analyst",
     bio: "Architecting high-performance websites and turning raw data into actionable insights. From clean code to conversion-optimised dashboards, I ensure every digital asset we build is fast, measurable, and built to grow.",
     quote: "Data tells you what's happening. Good engineering makes sure it never stops happening.",
     linkedin: "https://www.linkedin.com/in/suriyanarayanan-g/",
