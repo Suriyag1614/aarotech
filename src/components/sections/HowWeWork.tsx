@@ -1,4 +1,5 @@
 import { processSteps } from "@/data/content";
+import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 export function HowWeWork() {
   return (
@@ -8,25 +9,31 @@ export function HowWeWork() {
           
           <div className="flex flex-col space-y-12 relative z-10">
             <div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">The Roadmap to Predictable Growth</h2>
-              <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-xl">
-                A simple, transparent process to take your business from where it is to where it needs to be.
-              </p>
+              <AnimateOnScroll delay="0s">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">The Roadmap to Predictable Growth</h2>
+              </AnimateOnScroll>
+              <AnimateOnScroll delay="0.1s">
+                <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-xl">
+                  A simple, transparent process to take your business from where it is to where it needs to be.
+                </p>
+              </AnimateOnScroll>
             </div>
             
             <div className="flex flex-col space-y-8 relative before:absolute before:inset-0 before:ml-7 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
               {processSteps.map((step, index) => (
-                <div key={index} className="relative flex items-start gap-6 group">
-                  <div className="shrink-0 w-14 h-14 bg-black border border-white/10 text-slate-300 rounded-full flex items-center justify-center font-bold text-xl group-hover:bg-primary/20 group-hover:text-primary group-hover:border-primary/50 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.05)] group-hover:shadow-[0_0_20px_rgba(255,0,0,0.3)] z-10 relative">
-                    {step.step}
+                <AnimateOnScroll key={index} delay={`${index * 0.1 + 0.2}s`}>
+                  <div className="relative flex items-start gap-6 group">
+                    <div className="shrink-0 w-14 h-14 bg-black border border-white/10 text-slate-300 rounded-full flex items-center justify-center font-bold text-xl group-hover:bg-primary/20 group-hover:text-primary group-hover:border-primary/50 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.05)] group-hover:shadow-[0_0_20px_rgba(255,0,0,0.3)] z-10 relative">
+                      {step.step}
+                    </div>
+                    <div className="pt-3">
+                      <h3 className="text-xl font-bold mb-2 text-white group-hover:text-primary transition-colors">{step.title}</h3>
+                      <p className="text-slate-400 leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="pt-3">
-                    <h3 className="text-xl font-bold mb-2 text-white group-hover:text-primary transition-colors">{step.title}</h3>
-                    <p className="text-slate-400 leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
+                </AnimateOnScroll>
               ))}
             </div>
           </div>

@@ -11,6 +11,17 @@ export function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    setIsMobileMenuOpen(false);
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  };
+
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     setIsMobileMenuOpen(false);
     const href = e.currentTarget.getAttribute("href");
@@ -37,7 +48,7 @@ export function Header() {
     <header className="fixed top-0 w-full z-50 border-b bg-white/90 backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between">
         <div className="flex gap-2 items-center">
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" onClick={handleLogoClick} className="flex items-center space-x-2">
             <Image 
               src="/images/aarotech-logos/header-logo-light.png" 
               alt="Aarotech" 
