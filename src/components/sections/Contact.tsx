@@ -1,47 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { CheckCircle2 } from "lucide-react";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
+import { ContactForm } from "@/components/shared/ContactForm";
 
 export function Contact() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [selectedChallenge, setSelectedChallenge] = useState<string>("");
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch("https://formspree.io/f/mzdqqdao", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-
-      if (response.ok) {
-        setIsSuccess(true);
-        form.reset();
-      } else {
-        alert("Oops! There was a problem submitting your form.");
-      }
-    } catch {
-      alert("Oops! There was a problem submitting your form.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <section id="contact" className="py-24 bg-slate-950 text-white relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,72 +41,7 @@ export function Contact() {
 
           <AnimateOnScroll delay="0.4s" className="h-full">
             <div className="bg-slate-900 p-8 md:p-10 rounded-2xl border border-slate-800 shadow-xl h-full flex flex-col">
-            {isSuccess ? (
-              <div className="h-full flex flex-col items-center justify-center text-center py-12">
-                <div className="w-16 h-16 bg-green-500/10 text-green-400 rounded-full flex items-center justify-center mb-6">
-                  <CheckCircle2 className="w-8 h-8" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-white">Message Sent!</h3>
-                <p className="text-slate-300 mb-8">
-                  Thank you for reaching out. We will get back to you with your free growth plan shortly.
-                </p>
-                <Button variant="outline" onClick={() => setIsSuccess(false)} className="rounded-xl border-slate-700 hover:bg-slate-800 text-white hover:text-white">
-                  Send another message
-                </Button>
-              </div>
-            ) : (
-              <>
-                <h3 className="text-2xl font-bold mb-6 text-white">Request Your Free Growth Plan</h3>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name" className="text-white">Full Name</Label>
-                    <Input id="name" name="name" placeholder="John Doe" required className="bg-slate-950 border-slate-800 text-white placeholder:text-slate-500" />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="businessName" className="text-white">Business Name</Label>
-                    <Input id="businessName" name="businessName" placeholder="Acme Corp" required className="bg-slate-950 border-slate-800 text-white placeholder:text-slate-500" />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="text-white">Email Address</Label>
-                    <Input id="email" name="email" type="email" placeholder="you@company.com" className="bg-slate-950 border-slate-800 text-white placeholder:text-slate-500" />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-white">Phone Number</Label>
-                    <Input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required className="bg-slate-950 border-slate-800 text-white placeholder:text-slate-500" />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="challenge" className="text-white">What is your biggest challenge right now?</Label>
-                    <Select name="challenge" required onValueChange={(val) => setSelectedChallenge(val ? String(val) : "")}>
-                      <SelectTrigger className="w-full bg-slate-950 border-slate-800 text-white">
-                        <SelectValue placeholder="Select your biggest challenge..." />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="We need more qualified leads">We need more qualified leads</SelectItem>
-                        <SelectItem value="We are wasting money on ads">We are wasting money on ads</SelectItem>
-                        <SelectItem value="Our website is outdated">Our website is outdated</SelectItem>
-                        <SelectItem value="We have low website traffic (SEO)">We have low website traffic (SEO)</SelectItem>
-                        <SelectItem value="Other">Other</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  {selectedChallenge === "Other" && (
-                    <div className="space-y-2 animate-in fade-in slide-in-from-top-2 duration-300">
-                      <Label htmlFor="otherChallenge" className="text-white">Please specify your challenge</Label>
-                      <Input id="otherChallenge" name="otherChallenge" placeholder="Tell us more about your challenge..." required className="bg-slate-950 border-slate-800 text-white placeholder:text-slate-500" />
-                    </div>
-                  )}
-
-                  <Button type="submit" size="lg" className="w-full text-base bg-primary text-white hover:bg-primary/90" disabled={isSubmitting}>
-                    {isSubmitting ? "Sending..." : "Get My Free Growth Plan"}
-                  </Button>
-                </form>
-              </>
-            )}
+              <ContactForm />
             </div>
           </AnimateOnScroll>
         </div>

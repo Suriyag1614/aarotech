@@ -6,6 +6,7 @@ import { FallbackImage as Image } from "@/components/ui/fallback-image";
 import { usePathname } from "next/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { ContactPopup } from "@/components/shared/ContactPopup";
 
 export function Header() {
   const pathname = usePathname();
@@ -77,7 +78,9 @@ export function Header() {
           <Link href="/#faq" onClick={handleScroll} className="transition-colors hover:text-primary text-slate-700 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm">FAQ</Link>
         </nav>
         <div className="hidden sm:flex items-center gap-4">
-          <Link href="/#contact" onClick={handleScroll} className={buttonVariants({ size: "lg", className: "text-base font-semibold px-6 xl:px-8" })}>Get My Free Growth Plan</Link>
+          <ContactPopup>
+            <button className={buttonVariants({ size: "lg", className: "text-base font-semibold px-6 xl:px-8" })}>Get My Free Growth Plan</button>
+          </ContactPopup>
         </div>
         <button 
           className="lg:hidden p-2 text-foreground"

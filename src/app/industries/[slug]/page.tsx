@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight, AlertTriangle, Lightbulb } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
+import { ContactPopup } from "@/components/shared/ContactPopup";
 import type { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -112,10 +113,12 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
             <p className="text-slate-400 mb-8 text-lg max-w-2xl mx-auto">
               Stop wasting money on generic campaigns that don&apos;t convert. Get a custom growth plan designed specifically for your industry.
             </p>
-            <Link href="/#contact" className={buttonVariants({ size: "lg", className: "h-12 px-8 text-base bg-primary text-primary-foreground hover:bg-primary/90 border-none" })}>
-              {industry.cta || "Get My Free Growth Plan"}
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            <ContactPopup>
+              <button className={buttonVariants({ size: "lg", className: "h-12 px-8 text-base bg-primary text-primary-foreground hover:bg-primary/90 border-none" })}>
+                {industry.cta || "Get My Free Growth Plan"}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </button>
+            </ContactPopup>
           </div>
 
         </div>

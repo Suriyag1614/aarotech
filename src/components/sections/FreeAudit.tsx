@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
+import { ContactPopup } from "@/components/shared/ContactPopup";
 
 export function FreeAudit() {
   return (
@@ -45,9 +46,11 @@ export function FreeAudit() {
           </AnimateOnScroll>
         </div>
         <AnimateOnScroll delay="0.4s">
-          <Link href="#contact" className={buttonVariants({ variant: "default", size: "lg", className: "h-14 px-8 text-lg font-bold shadow-lg shadow-primary/20" })}>
-            Get My Free Growth Plan
-          </Link>
+          <ContactPopup>
+            <button className={buttonVariants({ variant: "default", size: "lg", className: "h-14 px-8 text-lg font-bold shadow-lg shadow-primary/20" })}>
+              Get My Free Growth Plan
+            </button>
+          </ContactPopup>
         </AnimateOnScroll>
       </div>
     </section>

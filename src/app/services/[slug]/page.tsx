@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
+import { ContactPopup } from "@/components/shared/ContactPopup";
 import type { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -61,10 +62,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               {service.intro || service.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/#contact" className={buttonVariants({ size: "lg", className: "h-12 px-8 text-base" })}>
-                {service.cta || "Get My Free Growth Plan"}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              <ContactPopup>
+                <button className={buttonVariants({ size: "lg", className: "h-12 px-8 text-base" })}>
+                  {service.cta || "Get My Free Growth Plan"}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </button>
+              </ContactPopup>
             </div>
           </div>
 

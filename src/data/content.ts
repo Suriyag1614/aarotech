@@ -159,7 +159,7 @@ export const founders = [
   {
     name: "Suriyanarayanan",
     fullName: "Suriyanarayanan",
-    role: "Development & UX",
+    role: "Web Development & Data Analytics",
     bio: "Building lightning-fast, scalable, and beautifully designed websites focused entirely on user experience and lead generation.",
     quote: "Performance is a feature. If your website isn't fast, you're losing customers before they even see your offer.",
     linkedin: "",
@@ -167,7 +167,7 @@ export const founders = [
   },
   {
     name: "Aaron",
-    fullName: "Aaron",
+    fullName: "Aaron John",
     role: "Founder & Lead Strategist",
     bio: "I don't believe in handing you off to a junior account manager. When you work with us, I personally oversee your strategy to ensure we are driving actual revenue, not just clicks.",
     quote: "Helping businesses generate measurable growth through data-driven digital marketing.",
