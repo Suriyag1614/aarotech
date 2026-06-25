@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import {
   Dialog,
@@ -23,9 +23,42 @@ export function ContactPopup({
     onOpenChange?.(val);
   };
 
+  // Lock body scroll when dialog is open to prevent background page jumping
+  useEffect(() => {
+    if (open) {
+      const scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
+      document.body.style.overflowY = "scroll";
+    } else {
+      const scrollY = document.body.style.top;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.body.style.overflowY = "";
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      }
+    }
+    return () => {
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.body.style.overflowY = "";
+    };
+  }, [open]);
+
   return (
     <>
-      <span onClick={() => handleOpenChange(true)} style={{ display: "contents" }}>
+      {/* Stop propagation so clicks on the trigger don't bubble weirdly */}
+      <span
+        onClick={(e) => {
+          e.stopPropagation();
+          handleOpenChange(true);
+        }}
+        style={{ display: "contents" }}
+      >
         {children}
       </span>
       <Dialog open={open} onOpenChange={handleOpenChange}>
@@ -37,6 +70,8 @@ export function ContactPopup({
             max-sm:top-auto max-sm:bottom-0 max-sm:left-0 max-sm:right-0 max-sm:translate-x-0 max-sm:translate-y-0
             max-sm:w-full max-sm:max-w-full max-sm:rounded-b-none max-sm:rounded-t-2xl
           "
+          // Stop all clicks inside dialog from bubbling to the page
+          onClick={(e) => e.stopPropagation()}
         >
           <DialogTitle className="sr-only">Request Your Free Growth Plan</DialogTitle>
           {/* Sticky header with title + close button */}

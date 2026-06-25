@@ -26,8 +26,8 @@ export function MeetFounders() {
           {founders.map((founder, index) => {
             const isFounder = index === 1;
             return (
-              <AnimateOnScroll key={index} delay={`${index * 0.1 + 0.3}s`} className="h-full">
-                <div className={`flex flex-col items-center text-center group ${isFounder ? 'order-first md:order-none md:-mt-8' : 'scale-90 opacity-90 hover:opacity-100 hover:scale-95 transition-all duration-300'}`}>
+              <AnimateOnScroll key={index} delay={`${index * 0.1 + 0.3}s`} className={`h-full ${isFounder ? 'order-first md:order-none' : ''}`}>
+                <div className={`flex flex-col items-center text-center group ${isFounder ? 'md:-mt-8' : 'scale-90 opacity-90 hover:opacity-100 hover:scale-95 transition-all duration-300'}`}>
                   <div className={`${isFounder ? 'w-48 h-48 md:w-56 md:h-56' : 'w-32 h-32 md:w-40 md:h-40'} rounded-full bg-slate-200 mb-6 overflow-hidden relative flex items-center justify-center text-slate-500 border-4 border-white shadow-lg group-hover:border-primary/20 transition-all duration-300`}>
                     {founder.photo ? (
                       <Image src={founder.photo} alt={founder.name} fill sizes="(max-width: 768px) 160px, 224px" className="object-cover" />
