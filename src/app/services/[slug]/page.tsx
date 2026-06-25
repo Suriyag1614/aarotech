@@ -2,7 +2,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { services } from "@/data/content";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { ContactPopup } from "@/components/shared/ContactPopup";

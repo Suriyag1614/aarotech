@@ -1,7 +1,6 @@
 import { caseStudies } from "@/data/content";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, LayoutTemplate } from "lucide-react";
-import Link from "next/link";
 import { FallbackImage as Image } from "@/components/ui/fallback-image";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 import { ContactPopup } from "@/components/shared/ContactPopup";

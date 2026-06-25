@@ -1,4 +1,4 @@
-import { Code, Search, Megaphone, Share2, PenTool, LayoutTemplate, Video } from "lucide-react";
+import { Code, Search, Megaphone, PenTool, LayoutTemplate, Video } from "lucide-react";
 
 export const services = [
   {

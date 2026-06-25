@@ -2,7 +2,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { industries } from "@/data/content";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { ArrowRight, AlertTriangle, Lightbulb } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { ContactPopup } from "@/components/shared/ContactPopup";
