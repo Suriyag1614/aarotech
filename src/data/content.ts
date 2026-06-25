@@ -189,8 +189,8 @@ export const testimonials: Array<{ id: string, quote: string, author: string, ro
   {
     id: "t1",
     quote: "Aarotech completely transformed our digital presence. We saw incredible results within the first quarter.",
-    author: "Rahul Verma",
-    role: "CEO",
+    author: "Mr. Joshua",
+    role: "Managing Director",
     company: "Gleam",
     resultAchieved: "200% Increase in Leads",
     photo: "/images/client-logos/gleam.jpeg",
@@ -198,7 +198,7 @@ export const testimonials: Array<{ id: string, quote: string, author: string, ro
   {
     id: "t2",
     quote: "The level of communication and the quality of leads we've been getting is unmatched.",
-    author: "Sneha Patel",
+    author: "Mrs. Princy",
     role: "Founder",
     company: "Rose",
     resultAchieved: "Tripled Revenue in 6 Months",
@@ -207,8 +207,8 @@ export const testimonials: Array<{ id: string, quote: string, author: string, ro
   {
     id: "t3",
     quote: "Highly recommend them for anyone looking to scale their educational institution.",
-    author: "Dr. Ananya Reddy",
-    role: "Director",
+    author: "Mr. Mathew",
+    role: "Managing Director",
     company: "Shine Academy",
     resultAchieved: "50% Higher Enrollment",
     photo: "/images/client-logos/shine-academy.jpeg",
@@ -216,8 +216,8 @@ export const testimonials: Array<{ id: string, quote: string, author: string, ro
   {
     id: "t4",
     quote: "They understand our brand perfectly and execute flawlessly on every campaign.",
-    author: "Karthik Subramaniam",
-    role: "Marketing Head",
+    author: "Mr. John",
+    role: "South Zone Distributor",
     company: "Stepzy",
     resultAchieved: "150k+ New Followers",
     photo: "/images/client-logos/stepzy.jpeg",
@@ -225,9 +225,9 @@ export const testimonials: Array<{ id: string, quote: string, author: string, ro
   {
     id: "t5",
     quote: "Best agency we've worked with. Period. The ROI speaks for itself.",
-    author: "Arjun Nair",
-    role: "Operations Manager",
-    company: "Tosh",
+    author: "Dr. Sundar Prakash",
+    role: "Managing Director",
+    company: "TOSH",
     resultAchieved: "Lowered CPA by 40%",
     photo: "/images/client-logos/tosh.jpeg",
   }
