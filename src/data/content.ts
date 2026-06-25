@@ -162,7 +162,7 @@ export const founders = [
     role: "Web Development & Data Analytics",
     bio: "Architecting high-performance websites and turning raw data into actionable insights. From clean code to conversion-optimised dashboards, I ensure every digital asset we build is fast, measurable, and built to grow.",
     quote: "Data tells you what's happening. Good engineering makes sure it never stops happening.",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/suriyanarayanan-g/",
     photo: "/images/crew/suriyanarayanan.jpeg",
   },
   {
