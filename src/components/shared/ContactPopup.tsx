@@ -100,7 +100,7 @@ export function ContactPopup({
               <X className="w-4 h-4" />
             </button>
           </div>
-          <div className="p-5 sm:p-8 overflow-y-auto flex-1">
+          <div className="p-5 sm:p-8 overflow-y-auto flex-1 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
             <ContactForm key={formKey} onSuccess={handleSuccess} />
           </div>
         </DialogContent>
