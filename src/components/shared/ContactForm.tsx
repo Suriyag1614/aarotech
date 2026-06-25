@@ -18,7 +18,7 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
     e.preventDefault();
 
     // Re-validate email at submit time
-    const emailVal = (e.currentTarget.elements.namedItem("email") as HTMLInputElement)?.value.trim();
+    const emailVal = (e.currentTarget.elements.namedItem("email") as HTMLInputElement)?.value?.trim() || "";
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (emailVal && !emailRegex.test(emailVal)) {
       setEmailError("Enter a valid email address.");
@@ -32,7 +32,7 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
     }
 
     // Re-validate phone at submit time
-    const phoneVal = (e.currentTarget.elements.namedItem("phone") as HTMLInputElement)?.value.trim();
+    const phoneVal = (e.currentTarget.elements.namedItem("phone") as HTMLInputElement)?.value?.trim() || "";
     const digits = phoneVal.replace(/\D/g, "");
     if (!phoneVal || digits.length < 7 || digits.length > 15) {
       setPhoneError("Enter a valid phone number (7–15 digits).");

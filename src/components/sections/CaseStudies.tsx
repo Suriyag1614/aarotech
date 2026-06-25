@@ -4,6 +4,7 @@ import { ArrowRight, LayoutTemplate } from "lucide-react";
 import Link from "next/link";
 import { FallbackImage as Image } from "@/components/ui/fallback-image";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
+import { ContactPopup } from "@/components/shared/ContactPopup";
 
 export function CaseStudies() {
   return (
@@ -21,9 +22,11 @@ export function CaseStudies() {
             </AnimateOnScroll>
           </div>
           <AnimateOnScroll delay="0.2s">
-            <Link href="#contact" className="inline-flex items-center font-bold text-primary hover:text-primary/80 transition-colors">
-              Start Your Success Story <ArrowRight className="ml-2 w-4 h-4" />
-            </Link>
+            <ContactPopup>
+              <button className="inline-flex items-center font-bold text-primary hover:text-primary/80 transition-colors cursor-pointer">
+                Start Your Success Story <ArrowRight className="ml-2 w-4 h-4" />
+              </button>
+            </ContactPopup>
           </AnimateOnScroll>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -76,9 +79,11 @@ export function CaseStudies() {
             <p className="text-sm text-slate-500 mb-6 italic">
               Detailed case studies and campaign data available during consultation.
             </p>
-            <Link href="/#contact" className="inline-flex items-center text-sm font-bold text-slate-700 hover:text-primary transition-colors border border-slate-200 hover:border-primary rounded-full px-6 py-2.5 bg-white shadow-sm">
-              Request Full Case Study <ArrowRight className="ml-2 w-4 h-4" />
-            </Link>
+            <ContactPopup>
+              <button className="inline-flex items-center text-sm font-bold text-slate-700 hover:text-primary transition-colors border border-slate-200 hover:border-primary rounded-full px-6 py-2.5 bg-white shadow-sm cursor-pointer">
+                Request Full Case Study <ArrowRight className="ml-2 w-4 h-4" />
+              </button>
+            </ContactPopup>
           </div>
         </AnimateOnScroll>
       </div>
