@@ -93,7 +93,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden border-t bg-background absolute w-full shadow-lg h-[calc(100dvh-80px)] overflow-y-auto">
+        <div className="lg:hidden border-t bg-white/95 backdrop-blur-xl absolute w-full shadow-xl h-[calc(100dvh-80px)] overflow-y-auto">
           <nav className="flex flex-col items-center gap-4 pt-8 pb-32 text-base font-medium">
             <Link href="/#services" onClick={handleScroll} className="transition-colors hover:text-primary text-foreground w-full text-center py-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">Services</Link>
             <Link href="/#industries" onClick={handleScroll} className="transition-colors hover:text-primary text-foreground w-full text-center py-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">Industries</Link>

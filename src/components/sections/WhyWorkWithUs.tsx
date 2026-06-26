@@ -66,7 +66,7 @@ export function WhyWorkWithUs() {
             </div>
           </div>
 
-          <AnimateOnScroll delay="0.6s" className="relative h-full flex flex-col justify-center">
+          <AnimateOnScroll delay="0.6s" className="relative h-full flex flex-col justify-center order-first lg:order-last mb-8 lg:mb-0">
             <div className="relative">
               <div className="aspect-[4/2.8] bg-slate-100 rounded-3xl overflow-hidden relative border-8 border-white shadow-xl">
                 <Image

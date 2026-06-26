@@ -61,19 +61,22 @@ export function Hero() {
               muted
               playsInline
               preload="auto"
-              className="w-full h-full lg:h-[550px] object-cover pointer-events-none lg:scale-[1.25] mix-blend-screen lg:mix-blend-normal lg:[mask-image:radial-gradient(circle_at_center,black_50%,transparent_80%)] lg:[-webkit-mask-image:radial-gradient(circle_at_center,black_50%,transparent_80%)] will-change-transform"
+              className="w-full h-full lg:h-[550px] object-cover pointer-events-none lg:scale-[1.25] mix-blend-screen lg:mix-blend-normal [mask-image:radial-gradient(circle_at_center,black_30%,transparent_80%)] [-webkit-mask-image:radial-gradient(circle_at_center,black_30%,transparent_80%)] lg:[mask-image:radial-gradient(circle_at_center,black_50%,transparent_80%)] lg:[-webkit-mask-image:radial-gradient(circle_at_center,black_50%,transparent_80%)] will-change-transform"
             />
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/30 w-full flex flex-col items-center relative z-10 pb-8 lg:pb-0">
-          <p className="text-sm text-white/70 font-bold mb-6 uppercase tracking-wider text-center">Specialized digital strategies for:</p>
+        <div className="mt-16 pt-8 border-t border-white/10 w-full flex flex-col items-center relative z-10 pb-8 lg:pb-0">
+          <p className="text-sm text-white/50 font-bold mb-6 uppercase tracking-wider text-center">Specialized digital strategies for:</p>
           <div className="flex flex-wrap justify-center gap-4">
             {["Healthcare", "Education", "Local Businesses"].map((industry) => (
-              <span key={industry} className="px-5 py-2.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-sm font-semibold text-white shadow-sm">
+              <span key={industry} className="px-5 py-2.5 rounded-full border border-white/10 bg-[#0f172a]/40 backdrop-blur-md text-sm font-semibold text-white/90 shadow-sm transition-colors hover:bg-[#0f172a]/60 hover:border-white/20 cursor-default">
                 {industry}
               </span>
             ))}
+            <span className="px-5 py-2.5 rounded-full border border-transparent bg-transparent text-sm font-medium text-white/50 flex items-center italic">
+              + Many More
+            </span>
           </div>
         </div>
       </div>

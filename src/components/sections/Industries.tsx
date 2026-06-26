@@ -51,6 +51,21 @@ export function Industries() {
             </AnimateOnScroll>
           ))}
         </div>
+        
+        <AnimateOnScroll delay="0.5s">
+          <div className="mt-16 text-center">
+            <div className="inline-flex items-center gap-4">
+              <div className="h-px w-12 sm:w-24 bg-slate-200"></div>
+              <p className="text-lg md:text-xl font-bold text-slate-400 italic tracking-wide">
+                ...and Many More
+              </p>
+              <div className="h-px w-12 sm:w-24 bg-slate-200"></div>
+            </div>
+            <p className="text-sm text-slate-500 mt-4 max-w-xl mx-auto">
+              Don&apos;t see your industry? We build custom growth strategies for all types of businesses. Reach out to see how we can help.
+            </p>
+          </div>
+        </AnimateOnScroll>
       </div>
     </section>
   );
