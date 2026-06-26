@@ -57,6 +57,7 @@ export function Header() {
               height={60} 
               className="h-12 md:h-16 w-auto object-contain block dark:hidden"
               priority
+              loading="eager"
             />
             <Image 
               src="/images/aarotech-logos/header-logo-dark.png" 
@@ -65,6 +66,7 @@ export function Header() {
               height={60} 
               className="h-12 md:h-16 w-auto object-contain hidden dark:block"
               priority
+              loading="eager"
             />
           </Link>
         </div>
